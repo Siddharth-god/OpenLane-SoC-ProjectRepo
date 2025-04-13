@@ -17,3 +17,4 @@ Then I opened VirtualBox > Settings > Shared Folders for my VM and added the Fol
 3. Booting into Linux & Checking the Folder
    
 After starting the Linux VM again, I ran:
+
