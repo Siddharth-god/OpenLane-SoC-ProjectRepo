@@ -1,6 +1,6 @@
-#This is a OpenLane SoC project Repository.#
+# This is a OpenLane SoC project Repository.
 
-##Setting Up Shared Folder Between Windows and Linux VirtualBox##
+## Setting Up Shared Folder Between Windows and Linux VirtualBox
 
 While working on my RISC-V SoC project in the Linux VirtualBox environment, I needed to share screenshots and files from my Linux VM to my Windows system. Here’s exactly what I did, step by step:
 
