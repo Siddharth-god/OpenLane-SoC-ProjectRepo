@@ -74,7 +74,7 @@ These are some tools we have given access to you can see in designs and there ar
 
 __Step 1 - Synthesis__
 
-### Before Synthesis Processess to be done -
+#### Before Synthesis Processess to be done -
 
     - Design set-up stage - We need to setup a file system specific to the flow as we
     perform the steps we are going to fetch files from the perticular folder/location. 
@@ -110,9 +110,11 @@ Percentage = 10.8
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img2.png)
 
-Here you can see the RESULT and the REPORT by running these commands and the files 
-inside are the whole data of it.
+### Here you can see the RESULT and the REPORT by running these commands and the files 
+### inside are the whole data of it. 
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img3.png)
+
 ![Alt text](linux_images/D1-Sk3-Lec5-img4.png)
 
+## Now Day 1 comes to the end with this and we are moving on to the next Day from here.
