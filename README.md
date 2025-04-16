@@ -1,6 +1,6 @@
 # This is a OpenLane SoC project Repository.
 
-#### Exand to see the process for shared folders in linux and windows
+### Exand to see the process for shared folders in linux and windows
 <details>
   <summary><b>Expand / Creating Shared Folder</b></summary>
 
