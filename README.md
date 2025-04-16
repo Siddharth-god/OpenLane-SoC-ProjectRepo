@@ -83,8 +83,9 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
 </details>
 
-
-# Day 1 ---------------------------------------------------------------------------------
+<hr>
+<h1> Day 1 <h1>
+<hr>
 
 <details>
   <summary><h1>Theory<h1></summary>
