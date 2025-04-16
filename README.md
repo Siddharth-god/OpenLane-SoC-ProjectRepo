@@ -86,10 +86,11 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
 
 <hr>
-<h1> Day 1 <h1>
+
+## Day 1 
 
 <details>
-  <summary><h2>Theory<h2></summary>
+  <summary><h3>Theory<h3></summary>
 
   
 
