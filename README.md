@@ -2,7 +2,7 @@
 
 # Dgital VLSI SoC Design and Planning
 
-### Exand to see the process for shared folders in linux and windows
+### Expand to see the process for shared folders in linux and windows
 <details>
   <summary><h3>Expand / Creating Shared Folder<h3></summary>
 
