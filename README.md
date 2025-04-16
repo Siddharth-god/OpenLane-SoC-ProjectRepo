@@ -83,12 +83,13 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
 </details>
 
+
+
 <hr>
 <h1> Day 1 <h1>
-<hr>
 
 <details>
-  <summary><h1>Theory<h1></summary>
+  <summary><h2>Theory<h2></summary>
 
   
 
