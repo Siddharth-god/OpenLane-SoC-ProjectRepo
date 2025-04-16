@@ -1,6 +1,9 @@
 # This is a OpenLane SoC project Repository.
 
-## Setting Up Shared Folder Between Windows and Linux VirtualBox
+<details>
+  <summary><b>Creating Shared Folder</b></summary>
+
+  ## Setting Up Shared Folder Between Windows and Linux VirtualBox
 
 While working on my RISC-V SoC project in the Linux VirtualBox environment, I needed to share screenshots and files from my Linux VM to my Windows system. Here’s exactly what I did, step by step:
 
@@ -57,6 +60,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
     SO This is how i created the shared folders for my conveninvce i just shared it, so if anyone wants to do it in future they can atleast have something to refer.
 
+</details>
 
 
 ## Started with lectures 
