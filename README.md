@@ -66,7 +66,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 ## Started with lectures 
 
 Checking what tools and files we have access to and what we are going to work with in future. 
-These are some tools we have given access to you can see in designs and there are "pdks" and "openlane" as well let me show you. 
+These are some tools we have given access to. You can see in designs and there are "pdks" and "openlane" as well let me show you. 
 
 ![Alt text](linux_images/lec1-img1.png)
 ![Alt text](linux_images/lec1-img2.png)
