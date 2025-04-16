@@ -1,8 +1,8 @@
 # This is a OpenLane SoC project Repository.
 
-Click here to Expand : This is the process to create shared folders for VM and Windows.
+#### Exand to see the process for shared folders in linux and windows
 <details>
-  <summary><b>Creating Shared Folder</b></summary>
+  <summary><b>Expand / Creating Shared Folder</b></summary>
 
   ## Setting Up Shared Folder Between Windows and Linux VirtualBox
 
