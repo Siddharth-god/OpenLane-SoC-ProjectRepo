@@ -1,8 +1,10 @@
-# This is a OpenLane SoC project Repository.
+![Alt text](images/img0.1.png)
+
+# Dgital VLSI SoC Design and Planning
 
 ### Exand to see the process for shared folders in linux and windows
 <details>
-  <summary><b>Expand / Creating Shared Folder</b></summary>
+  <summary><h3>Expand / Creating Shared Folder<h3></summary>
 
   ## Setting Up Shared Folder Between Windows and Linux VirtualBox
 
@@ -87,11 +89,119 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
 <hr>
 
-## Day 1 
+## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 <details>
   <summary><h3>Theory<h3></summary>
 
+- ##### Packiging
+In The Embedded Boards we can see the chip is implanted. As we think it's a real chip but wait that's not it - IT'S NOT A ACTUAL CHIP , BUT IT'S ONLY A PACKAGE OR WE CAN SAY A CASE TO SAVE THE ACTUAL CHIP WHICH IS INSIDE OF THAT PACKAGE. The actual chip is made of silicon and it cannot be touched by bare hands so that's why it's packed with plastic layer. The connections from package is fed to the chip by __WIRE BOUND__ method which is none other than basic wired connection.
+![Alt text](images/img1.png)
+
+![Alt text](images/img2.png)
+
+![Alt text](images/img3.png)
+
+
+- ##### Chip
+Now, Inside the chip, all the signals from the outside to the chip and from inside are passed through PADS. The area bound by the pads is CORE where all the digital logic of the chip is placed. Both the core and pads make up the DIE which is the basic manufacturing unit in regards to semiconductor chips.
+![Alt text](images/img4.png)
+
+
+- ##### FOUNDRY 
+It is the place where the semiconductor chips are manufactured, This Foundries should be _CLEAN_ The word clean here dosen't mean like what we do in our house, it should not have even single particle of dust or any human part like hairs. FOUNDRY IP's are Intellectual Properties based on a specific foundry and these IP's require a specific level of intelligence to be produced whereas, repeatable digital logic blocks are called MACROS.
+![Alt text](images/img5.png)
+
+
+- ##### ISA (Intruction Set Architecture)
+A C program which has to be run on a specific hardware layout which is the interior of a chip in your laptop, there is certain flow to be followed.
+Initially, this particular C program is compiled in it's assembly language program which is nothing but RISC-V ISA (Reduced Instruction Set Compting - V Intruction Set Architecture).
+Following this, the assembly language program is then converted to machine language program which is the binary language logic 0 and 1 which is understood by the hardware of the computer.
+Directly after this, we've to implement this RISC-V specification using some RTL (a Hardware Description Language). Finally, from the RTL to Layout it is a standard PnR or RTL to GDSII flow.
+Screenshot (278)
+
+For an application software to be run on a hardware there are several processes taking place. To begin with, the apps enters into a block called system software and it converts the application program to binary language. There are various layers in system software in which the major layers or components are OS (Operating System), Compiler and Assembler.
+At first the OS outputs are small function in C, C++, VB or Java language which are taken by the respective compiler and converted into instructions and the syntax of these instructions varies with the hardware architecture on which the system is implemented.
+Then, the job of the assembler is to take these instructions and convert it into it's binary format which is basically called as a machine language program. Finally, this binary language is fed to the hardware and it understands the specific functions it has to perform based on the binary code it receives.
+Screenshot (279)
+
+For example, if we take a stopwatch app on RISC-V core, then the output of the OS could be a small C function which enters into the compiler and we get output RISC-V instructions following this, the output of the assembler will be the binary code which enters into your chip layout.
+Screenshot (280)
+
+For the above stopwatch the following are the input and output of the compiler and assembler.
+Screenshot (281)
+
+The output of the compiler are instructions and the output of the assembler is the binary pattern. Now, we need some RTL (a Hardware Description Language) which understands and implements the particular instructions. Then, this RTL is synthesised into a netlist in form of gates which is fabricated into the chip through a physical design implementation.
+Screenshot (282)
+
+There are mainly 3 different parts in this course. They are:
+RISC-V ISA
+RTL and synthesis of RISC-V based CPU core - picorv32
+Physical design implementation of picorv32
+Screenshot (283)
+
+Open-source Implementation
+For open-source ASIC design implemantation, we require the following enablers to be readily available as open-source versions. They are:-
+RTL Designs
+EDA Tools
+PDK Data
+Initially in the early ages, the design and fabrication of IC's were tightly coupled and were only practiced by very few companies like TI, Intel, etc.
+In 1979, Lynn Conway and Carver Mead came up with an idea to saperate the design from the fabrication and to do this they inroduced structured design methodologies based on the λ-based design rules and published the first VLSI book "Introduction to VLSI System" which started the VLSI education.
+This methodology resulted in the emergence of the design only companies or "Fabless Companies" and fabrication only companies that we usually refer to as "Pure Play Fabs".
+The inteface between the designers and the fab by now became a set of data files and documents, that are reffered to as the "Process Design Kits (PDKs)".
+The PDK include but not limited to Device Models, Technology Information, Design Rules, Digital Standard Cell Libraries, I/O Libraries and many more.
+Since, the PDK contained variety of informations, and so they were distributed only under NDAs (Non-Disclosure Agreements) which made it in-accessible to the public.
+Recently, Google worked out an agreement with skywater to open-source the PDK for the 130nm process by skywater Technology, as a result on 30 June 2020 Google released the first ever open-source PDK.
+image
+
+ASIC design is a complex step that involves tons of steps, various methodologies and respective EDA tools which are all required for successful ASIC implementation which is achieved though an ASIC flow which is nothing but a piece of software that pulls different tools togather to carry out the design process.
+image
+
+OpenLANE Open-source ASIC Design Implementation Flow
+The main objective of the ASIC Design Flow is to take the design from the RTL (Register Transfer Level) all the way to the GDSII, which is the format used for the final fabrication layout.
+image
+
+Synthesis is the process of convertion or translation of design RTL into circuits made out of Standard Cell Libraries (SCL) the resultant circuit is described in HDL and is usually reffered to as the Gate-Level Netlist.
+Gate-Level Netlist is functionally equivalent to the RTL.
+image
+
+The fundemental building blocks which are the standard cells have regular layouts.
+Each cell has different views/models which are utilised by different EDA tools like liberty view with electrical models of the cells, HDL behavioral models, SPICE or CDL views of the cells, Layout view which include GDSII view which is the detailed view and LEF view which is the abstract view.
+image
+
+Chip Floor Planning
+image
+
+Macro Floor Planning
+image
+
+Power Planning typically uses upper metal layers for power distribution since thay are thicker than lower metal layers and so have lower resistance and PP is done to avoid electron migration and IR drops.
+image
+
+Placement
+image
+
+Global placement provide approximate locations for all cells based on connectivity but in this stage the cells may be overlapped on each other and in detailed placement the positions obtained from global placements are minimally altered to make it legal (non-overlapping and in site-rows)
+image
+
+Clock Tree Synthesis
+image
+
+Clock skew is the time difference in arrival of clock at different components.
+Routing
+image
+
+skywater PDK has 6 routing layers in which the lowest layer is called the local interconnect layer which is a Titanium Nitride layer the following 5 layers are all Aluminium layers.
+stackup
+
+Global and Detailed Routing
+image
+
+Once done with the routing the final layout can be generated which undergoes various Sign-Off checks.
+Design Rules Checking (DRC) which verifies that the final layout honours all design fabrication rules.
+Layout Vs Schematic (LVS) which verifies that the final layout functionality matches the gate-level netlist that we started with.
+Static Timing Analysis (STA) to verify that the design runs at the designated clock frequency.
+image
   
 
 </details>
