@@ -39,7 +39,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
     ![Alt text](images/SF-img.png)
 
-    - #### As you can see there is a folder named shared folder.
+    - #### As you can see there is a folder named LinuxSnaps.
 
 #### Upto this everything should be easy : Next if the problem occurs as it did in mine.
 
@@ -84,7 +84,16 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 </details>
 
 
-## Started with lectures 
+# Day 1 ---------------------------------------------------------------------------------
+
+<details>
+  <summary><h1>Theory<h1></summary>
+
+  
+
+</details>
+
+
 
 Checking what tools and files we have access to and what we are going to work with in future. 
 These are some tools we have given access to. You can see in designs and there are "pdks" and "openlane" as well let me show you. 
