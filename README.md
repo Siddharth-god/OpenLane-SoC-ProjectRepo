@@ -12,7 +12,8 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
    
     First, I created a separate folder in my Windows system to keep things organized and avoid mixing with other screenshots.
-    I planned to use this folder whenever I wanted to move files between Linux and Windows — not just for OpenLAN, but for other Linux-related tasks too.
+    I planned to use this folder whenever I wanted to move files between Linux and Windows.
+
     ![Alt text](images/Sf-ss1.png)
 
 
