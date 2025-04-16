@@ -20,23 +20,26 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 2. __Configuring Shared Folder in VirtualBox Settings__
    
 
-    Then, I configured this folder as a shared folder in VirtualBox:
+    - Then, I configured this folder as a shared folder in VirtualBox:
     I completely powered off the virtual machine (not saved state).
     Then I opened VirtualBox > Settings > Shared Folders for my VM and added the Folder.
+
     ![Alt text](images/Sf-s1.png)
     
-    here you will click on the small "plus file" icon on the right
+    - #### Click on the small "plus file" icon on the right.
+
     ![Alt text](images/Sf-s2.png)
     
-    Then do the simple process to create the folder 
-    "MAKE SURE YOUR VM IS COMPLETELY SWITCHED OFF AND NOT IN SAVED STATE"
+    #### Then do the simple process to create the folder 
+    #### "MAKE SURE YOUR VM IS COMPLETELY SWITCHED OFF AND NOT IN SAVED STATE"
 
     ![Alt text](images/Sf-s3.png)
 
-    Just click ok and there you go.
+    #### Just click ok and there you go.
 
     ![Alt text](images/SF-img.png)
-     As you can see there is a folder named shared folder.
+
+    #### As you can see there is a folder named shared folder.
 
 #### Upto this everything should be easy : Next if the problem occurs as it did in mine.
 
