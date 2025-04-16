@@ -70,9 +70,11 @@ These are some tools we have given access to you can see in designs and there ar
 
 # Starting with Openlane
 
-__1. Working with openlane__
+## __1. Working with openlane__
 
-    Step 1 - Synthesis 
+__Step 1 - Synthesis__
+
+### Before Synthesis Processess to be done -
 
     - Design set-up stage - We need to setup a file system specific to the flow as we
     perform the steps we are going to fetch files from the perticular folder/location. 
@@ -88,8 +90,29 @@ __1. Working with openlane__
 
     Now the preperation step is complete.
 
+    - If we open the file that we created it'll give us the "Date file" which stores the
+    data. And it has different files on it.
+
+![Alt text](linux_images/Day1-sec3-lec3-img1.png)
 
 
+## Flop count 
 
+Flop Ratio = Number of Flip_Flop / Number of cell counts
 
+The counter flip flop ratio is = dfxtp = 1613
+The number of cells = 14876
+
+The Flop count = 0.108
+Percentage = 10.8
+
+![Alt text](linux_images/D1-Sk3-Lec5-img1.png)
+
+![Alt text](linux_images/D1-Sk3-Lec5-img2.png)
+
+Here you can see the RESULT and the REPORT by running these commands and the files 
+inside are the whole data of it.
+
+![Alt text](linux_images/D1-Sk3-Lec5-img3.png)
+![Alt text](linux_images/D1-Sk3-Lec5-img4.png)
 
