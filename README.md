@@ -30,16 +30,16 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
     ![Alt text](images/Sf-s2.png)
     
-    #### Then do the simple process to create the folder 
-    #### "MAKE SURE YOUR VM IS COMPLETELY SWITCHED OFF AND NOT IN SAVED STATE"
+    - #### Then do the simple process shown in the image below to create the folder.
+    - #### "MAKE SURE YOUR VM IS COMPLETELY SWITCHED OFF AND NOT IN SAVED STATE"
 
     ![Alt text](images/Sf-s3.png)
 
-    #### Just click ok and there you go.
+    - #### Just click ok and there you go.
 
     ![Alt text](images/SF-img.png)
 
-    #### As you can see there is a folder named shared folder.
+    - #### As you can see there is a folder named shared folder.
 
 #### Upto this everything should be easy : Next if the problem occurs as it did in mine.
 
