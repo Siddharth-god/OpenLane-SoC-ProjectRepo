@@ -76,10 +76,12 @@ __1. Working with openlane__
 
     - Design set-up stage - We need to setup a file system specific to the flow as we perform the steps we are going to fetch files from the perticular folder/location. 
     This step helps the openlane to fetch the information from single file instead fetching it from two different LEF files. So were going to merge the two files together which are - lep.lep and Tlep.
-    
-![Alt text](linux_images/Day1-swc3-lec2-img1.png)
 
-![Alt text](linux_images/Day1-swc3-lec2-img2.png)
+![Alt text](linux_images/Day1-sec3-lec2-img1.png)
+
+![Alt text](linux_images/Day1-sec3-lec2-img2.png)
+
+![Alt text](linux_images/Day1-sec3-lec2-img3.png)
 
     Now the preperation step is complete.
 
