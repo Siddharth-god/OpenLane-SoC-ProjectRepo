@@ -1,5 +1,6 @@
 # This is a OpenLane SoC project Repository.
 
+Click here to Expand : This is the process to create shared folders for VM and Windows.
 <details>
   <summary><b>Creating Shared Folder</b></summary>
 
@@ -12,6 +13,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
    
     First, I created a separate folder in my Windows system to keep things organized and avoid mixing with other screenshots.
     I planned to use this folder whenever I wanted to move files between Linux and Windows — not just for OpenLAN, but for other Linux-related tasks too.
+    ![Alt text](images/Sf-ss1.png)
 
 
 2. __Configuring Shared Folder in VirtualBox Settings__
@@ -20,12 +22,27 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
     Then, I configured this folder as a shared folder in VirtualBox:
     I completely powered off the virtual machine (not saved state).
     Then I opened VirtualBox > Settings > Shared Folders for my VM and added the Folder.
+    ![Alt text](images/Sf-s1.png)
+    
+    here you will click on the small "plus file" icon on the right
+    ![Alt text](images/Sf-s2.png)
+    
+    Then do the simple process to create the folder 
+    "MAKE SURE YOUR VM IS COMPLETELY SWITCHED OFF AND NOT IN SAVED STATE"
 
+    ![Alt text](images/Sf-s3.png)
+
+    Just click ok and there you go.
+
+    ![Alt text](images/SF-img.png)
+     As you can see there is a folder named shared folder.
+
+#### Upto this everything should be easy : Next if the problem occurs as it did in mine.
 
 3. __Booting into Linux & Checking the Folder__
 
 
-    I added the folder but i wan't been able to see it in my linux windows 
+    I added the folder but i wasn't been able to see it in my linux windows 
     SO i used this command to create the directory but it failed by saying file already exist.
     To proceed further i needed to make sure that VirtualBox Guest Additions are installed in my Linux VM. This is necessary for shared folders to work.
 
@@ -45,7 +62,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
     After that process i got the folder running in my linux but it was denying the permission when i tried to move the screenshot in that folder
     ![Alt text](linux_images/img2.png)
-    So I had to run "sudo usermod -aG vboxsf $USER" this command to become the user and access the folder. I dont have the whole process as in forgot to take the SS.
+    So I had to run "sudo usermod -aG vboxsf $USER" this is the command to become the user and access the folder. I dont have the whole process as in forgot to take the SS. But all you need is COMMAND.
     ![Alt text](linux_images/img1.png)
 
     Then i used "sudo reboot"
