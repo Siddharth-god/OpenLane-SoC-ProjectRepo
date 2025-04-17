@@ -248,8 +248,9 @@ _Percentage of DFF's_ = _Flop Ratio_ * 100
 
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
 #### Commands to invoke the OpenLANE flow and perform synthesis.
-```
-# As we work in Openlane we have to first change our directory to openlane flow directory.
+```bash
+# As we work in Openlane we have to first change our directory to openlane flow directory. Just type -
+
 cd Desktop/work/tools/openlane_working_dir/openlane
 
 # alias docker ='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
@@ -262,7 +263,7 @@ command - docker
 ```
 <hr>
 
-```
+```bash
 # As we've entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
 ./flow.tcl -interactive
 
@@ -273,8 +274,8 @@ package require openlane 0.9
 
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 
-- Design set-up stage - We need to setup a file system specific to the flow as we perform the steps we are going to fetch files from the perticular folder/location. 
-This step helps the openlane to fetch the information from single file instead fetching it from two different LEF files. So were going to merge the two files together which are - lep.lep and Tlep.
+# Design set-up stage - We need to setup a file system specific to the flow as we perform the steps we are going to fetch files from the perticular folder/location. 
+# This step helps the openlane to fetch the information from single file instead fetching it from two different LEF files. So were going to merge the two files together which are - lep.lep and Tlep.
 
 prep -design picorv32a
 
