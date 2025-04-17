@@ -247,7 +247,8 @@ _Percentage of DFF's_ = _Flop Ratio_ * 100
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Number of D Flip Flops_  
-&nbsp;&nbsp;&nbsp;_Flop Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+&nbsp;&nbsp;&nbsp;_Flop Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Number of Cells_
 
 _Percentage of DFF's_ = Flop Ratio × 100
