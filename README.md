@@ -338,5 +338,47 @@ _Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
 ![Alt text](linux_images/D1-Sk3-Lec5-img3.png)
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img4.png)
+.
+.
+.
+.
+.
+### Day 1 comes to the end with this and we are moving on to the next Day from here.
 
-## Now Day 1 comes to the end with this and we are moving on to the next Day from here.
+<hr>
+
+## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
+
+<details>
+  <summary><h3>Theory</h3></summary>
+
+
+![Alt text](images/S1.jpg)
+![Alt text](images/S2.jpg)
+![Alt text](images/S3.jpg)
+![Alt text](images/S4.jpg)
+![Alt text](images/S5.jpg)
+![Alt text](images/S6.jpg)
+![Alt text](images/S7.jpg)
+![Alt text](images/S8.jpg)
+![Alt text](images/S9.jpg)
+![Alt text](images/S10.jpg)
+![Alt text](images/S11.jpg)
+![Alt text](images/S12.jpg)
+![Alt text](images/S13.jpg)
+![Alt text](images/S14.jpg)
+![Alt text](images/S15.jpg)
+![Alt text](images/S16.jpg)
+![Alt text](images/S17.jpg)
+![Alt text](images/S18.jpg)
+![Alt text](images/S19.jpg)
+![Alt text](images/S20.jpg)
+![Alt text](images/S21.jpg)
+
+
+
+
+
+</details>
+
+
