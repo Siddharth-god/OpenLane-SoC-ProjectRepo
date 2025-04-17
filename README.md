@@ -383,13 +383,11 @@ __Die__  : A die consist of core is a small semiconductor material speimen on wh
 - How to arrive on dimensions ? 
 
 ![Alt text](images/S4.jpg)
-
-_Utilization Factor_ =  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Area occupied by Netlist_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Area of the core_
+```
+                          Area occupied by Netlist
+Utilization Factor =    —————————————————————————————
+                          Total Area of the core
+```
 
 When the Utilization Factor is equal to 1.
 
@@ -398,7 +396,7 @@ so normally we go for 50% or 60% Utilization and not 100%
 
 ```
                     Height
-_Aspect Ratio_ =  ──────────
+Aspect Ratio =  ──────────
                     Width
 ```
 
@@ -413,14 +411,11 @@ _Aspect Ratio_ =  ──────────
 
 - Now for example if we put our 2x2 core (netlist) into the 4x4 chip then the Utilization Factor = 0.25.
 
-_Utilization Factor_ =  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_2*2 = 4_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——————— 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_4*4 = 16_
-
-So 4/16 is 0.25
+```
+                       2x2      4
+Utilization Factor =  ————— = ————— = 0.25
+                       4x4      16
+```
 
 - This suggest that the area occupied by the initial Netlist is 0.25 and 0.75 Area is free for Optimization.
 - The Netlist is completely connected by ideal wires which don't have any shape and size.
