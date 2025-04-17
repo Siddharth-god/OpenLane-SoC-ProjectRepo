@@ -395,9 +395,9 @@ It means that our core is fully occupied and we canno't add any extra cell,
 so normally we go for 50% or 60% Utilization and not 100%
 
 ```
-                    Height
-Aspect Ratio =  ──────────
-                    Width
+                 Height
+Aspect Ratio =  ────────
+                 Width
 ```
 
 - When the aspet ratio is one, it signifies that the core is __SQUARE__ Shaped and whenever the Aspect ratio is not 1 it signifies that the chip is __Rectangular__.
@@ -412,9 +412,9 @@ Aspect Ratio =  ──────────
 - Now for example if we put our 2x2 core (netlist) into the 4x4 chip then the Utilization Factor = 0.25.
 
 ```
-                       2x2      4
-Utilization Factor =  ————— = ————— = 0.25
-                       4x4      16
+                      Area occupied by Netlist    2x2      4
+Utilization Factor = ————————————————————————— = ————— = ————— = 0.25
+                      Total Area of the core      4x4      16
 ```
 
 - This suggest that the area occupied by the initial Netlist is 0.25 and 0.75 Area is free for Optimization.
