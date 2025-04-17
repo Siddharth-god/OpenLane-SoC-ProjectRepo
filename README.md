@@ -236,92 +236,13 @@ These are some tools we have given access to. You can see in designs and there a
 
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
 ##### 2.Calculate the Flop ratio
-F
-l
-o
-p
- 
-R
-a
-t
-i
-o
-=
-N
-u
-m
-b
-e
-r
- 
-o
-f
- 
-D
- 
-F
-l
-i
-p
- 
-F
-l
-o
-p
-s
-T
-o
-t
-a
-l
- 
-N
-u
-m
-b
-e
-r
- 
-o
-f
- 
-C
-e
-l
-l
-s
-P
-e
-r
-c
-e
-n
-t
-a
-g
-e
- 
-o
-f
- 
-D
-F
-F
-′
-s
-=
-F
-l
-o
-p
- 
-R
-a
-t
-i
-o
-∗
-100                
+
+           1613
+Flop Ratio = ------- = 0.108429685
+           14876
+
+Percentage of DFF's = 0.108429685 * 100 = 10.84296854 %
+
 
 - Processess to be done Before Synthesis -
 
