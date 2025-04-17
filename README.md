@@ -237,7 +237,7 @@ These are some tools we have given access to. You can see in designs and there a
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
 ##### 2.Calculate the Flop ratio
 
-_Flop Ratio_ = _Number of Counter Flip Flops_                                          ________________ Total Number of Cells
+_Flop Ratio_ = _Number of Counter Flip Flops_                                                                                                                                                                                           ________________ Total Number of Cells
 
 _Percentage of DFF's_ = _Flop Ratio_ * 100
 
