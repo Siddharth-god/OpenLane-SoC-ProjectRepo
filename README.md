@@ -265,13 +265,14 @@ _Percentage of DFF's_ = _Flop Ratio_ * 100
 
 You can see there is a new folder is added named _"runs"_
 
-    Now the preperation step is complete.
+Now the preperation step is complete.
 
-    - If we open the file that we created it'll give us the "Date file" which stores the
-    data such as "results","report".
+- If we open the file that we created it'll give us the "Date file" which stores the
+data such as "results","report".
 
 ![Alt text](linux_images/Day1-sec3-lec3-img1.png)
 
+<hr>
 
 2. Synthesis Process 
 
@@ -281,15 +282,14 @@ You can see there is a new folder is added named _"runs"_
 
 <hr>
 
-## Flop count 
+- ### Flop count 
 
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img1.png)
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img2.png)
 
-_Flop Count_ = 1613 / 14876 
-_Flop Count_ = 0.108429685
+_Flop Count_ = 1613 / 14876 = 0.108429685
 
 _Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
 
