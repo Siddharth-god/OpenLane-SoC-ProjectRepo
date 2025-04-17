@@ -219,7 +219,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 
 </details>
 
-
+<hr>
 
 Checking what tools and files we have access to and what we are going to work with in future. 
 These are some tools we have given access to. You can see in designs and there are "pdks" and "openlane" as well, let me show you. 
@@ -227,6 +227,7 @@ These are some tools we have given access to. You can see in designs and there a
 ![Alt text](linux_images/lec1-img1.png)
 ![Alt text](linux_images/lec1-img2.png)
 
+<hr>
 
 # Starting with Openlane
 
@@ -237,12 +238,15 @@ These are some tools we have given access to. You can see in designs and there a
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
 ##### 2.Calculate the Flop ratio
 
+- __Formula__ 
 
 _Flop Ratio_ = _Number of Counter Flip Flops_ / _Total Number of Cells_
 
 _Percentage of DFF's_ = _Flop Ratio_ * 100
 
+<hr>
 
+##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
 - Processess to be done Before Synthesis -
 
     - Design set-up stage - We need to setup a file system specific to the flow as we
@@ -251,32 +255,45 @@ _Percentage of DFF's_ = _Flop Ratio_ * 100
     fetching it from two different LEF files. So were going to merge the two files
     together which are - lep.lep and Tlep.
 
+1. Preperation Step
+
 ![Alt text](linux_images/Day1-sec3-lec2-img1.png)
 
 ![Alt text](linux_images/Day1-sec3-lec2-img2.png)
 
 ![Alt text](linux_images/Day1-sec3-lec2-img3.png)
 
+You can see there is a new folder is added named _"runs"_
+
     Now the preperation step is complete.
 
     - If we open the file that we created it'll give us the "Date file" which stores the
-    data. And it has different files in it.
+    data such as "results","report".
 
 ![Alt text](linux_images/Day1-sec3-lec3-img1.png)
 
 
+2. Synthesis Process 
+
+![Alt text](linux_images/synthesis-img1.png)
+
+![Alt text](linux_images/synthesis-img2.png)
+
+<hr>
+
 ## Flop count 
 
-
-The counter flip flop ratio is = dfxtp = 1613
-The number of cells = 14876
-
-The Flop count = 0.108
-Percentage = 10.8
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img1.png)
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img2.png)
+
+_Flop Count_ = 1613 / 14876 
+_Flop Count_ = 0.108429685
+
+_Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
+
+<hr>
 
 ### Here you can see the RESULT and the REPORT by running these commands and the files 
 ### inside are the whole data of it. 
