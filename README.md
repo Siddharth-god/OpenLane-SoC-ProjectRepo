@@ -362,8 +362,7 @@ _Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
 - Basic netlist
 ![Alt text](images/S1.jpg)
 
-FF - flip flop 
-A1 & O1 - Standard cells like AND,OR,INVERTER
+FF - flip flop | A1 & O1 - Standard cells like AND, OR, INVERTER.
 
 - We're taking this one netlist you can see in the image above as an example
 Netlist define the connectivity between all the components 
@@ -389,6 +388,7 @@ _Utilization Factor_ =
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Area occupied by Netlist_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Area of the core_
 
 When the Utilization Factor is equal to 1.
@@ -397,7 +397,8 @@ It means that our core is fully occupied and we canno't add any extra cell,
 so normally we go for 50% or 60% Utilization and not 100%
 
 _Aspect Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Height_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Width_
 
 - When the aspet ratio is one, it signifies that the core is __SQUARE__ Shaped and whenever the Aspect ratio is not 1 it signifies that the chip is __Rectangular__.
@@ -414,7 +415,8 @@ _Aspect Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Height_
 _Utilization Factor_ =  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_2*2 = 4_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——————— 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_4*4 = 16_
 
 So 4/16 is 0.25
