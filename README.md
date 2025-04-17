@@ -92,7 +92,7 @@ While working on my RISC-V SoC project in the Linux VirtualBox environment, I ne
 ## Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 <details>
-  <summary><h3>Theory<h3></summary>
+  <summary><h3>Theory - Click "Theory" to expand.<h3></summary>
 
 - ##### Packiging
     In The Embedded Boards we can see the chip is implanted. As we think it's a real chip but wait that's not it - IT'S NOT A ACTUAL CHIP , BUT IT'S ONLY A PACKAGE OR WE CAN SAY A CASE TO SAVE THE ACTUAL CHIP WHICH IS INSIDE OF THAT PACKAGE. The actual chip is made of silicon and it cannot be touched by bare hands so that's why it's packed with plastic layer. The connections from package is fed to the chip by __WIRE BOUND__ method which is none other than basic wired connection.
@@ -247,13 +247,47 @@ _Percentage of DFF's_ = _Flop Ratio_ * 100
 <hr>
 
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
-- Processess to be done Before Synthesis -
+#### Commands to invoke the OpenLANE flow and perform synthesis.
+```
+# As we work in Openlane we have to first change our directory to openlane flow directory.
+cd Desktop/work/tools/openlane_working_dir/openlane
 
-    - Design set-up stage - We need to setup a file system specific to the flow as we
-    perform the steps we are going to fetch files from the perticular folder/location. 
-    This step helps the openlane to fetch the information from single file instead
-    fetching it from two different LEF files. So were going to merge the two files
-    together which are - lep.lep and Tlep.
+# alias docker ='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# aliased basically means creating the short version of the command so we don't have to type very long command all the time.
+# So using only 'docker' we can invoke the OpenLANE flow docker sub-system.
+
+command - docker
+
+# After running docker the "bash" directory will get opened where we're gonna work
+```
+<hr>
+
+```
+# As we've entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now use this command to open the required package
+package require openlane 0.9
+
+# Processess to be done Before Synthesis -
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+
+- Design set-up stage - We need to setup a file system specific to the flow as we perform the steps we are going to fetch files from the perticular folder/location. 
+This step helps the openlane to fetch the information from single file instead fetching it from two different LEF files. So were going to merge the two files together which are - lep.lep and Tlep.
+
+prep -design picorv32a
+
+# Now that Preperations are done , we can run synthesis using following command
+run_synthesis
+
+# Exit from OpenLANE flow
+exit
+
+# Exit from OpenLANE flow docker sub-system
+exit
+```
+<hr>
 
 1. Preperation Step
 
