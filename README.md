@@ -239,6 +239,8 @@ These are some tools we have given access to. You can see in designs and there a
 ##### 2.Calculate the Flop ratio
 
 - __Formula__ 
+![Alt text](images/formula-flop-count.png)
+
 
 _Flop Ratio_ = _Number of Counter Flip Flops_ / _Total Number of Cells_
 
@@ -327,6 +329,7 @@ data such as "results","report".
 _Flop Count_ = 1613 / 14876 = 0.108429685
 
 _Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
+
 
 <hr>
 
