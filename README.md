@@ -241,10 +241,6 @@ These are some tools we have given access to. You can see in designs and there a
 - __Formula__ 
 
 
-_Flop Ratio_ = _Number of Counter Flip Flops_ / _Total Number of Cells_
-
-_Percentage of DFF's_ = _Flop Ratio_ * 100
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Number of D Flip Flops_  
 &nbsp;&nbsp;&nbsp;_Flop Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————
