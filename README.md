@@ -245,6 +245,15 @@ _Flop Ratio_ = _Number of Counter Flip Flops_ / _Total Number of Cells_
 
 _Percentage of DFF's_ = _Flop Ratio_ * 100
 
+
+**Flop Ratio** =  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Number of D Flip Flops_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————————  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Number of Cells_
+
+**Percentage of DFF's** = Flop Ratio × 100
+
+
 <hr>
 
 ##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
@@ -352,11 +361,43 @@ _Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
 <details>
   <summary><h3>Theory</h3></summary>
 
+#### 1. Define Height and width of core and Die.
 
+- Basic netlist
 ![Alt text](images/S1.jpg)
+
+FF - flip flop 
+A1 & O1 - Standard cells like AND,OR,INVERTER
+
+- We're taking this one netlist you can see in the image above as an example
+Netlist define the connectivity between all the components 
+
 ![Alt text](images/S2.jpg)
+
+- Each cell has Area of 1sq unit and when we connect them together,
+The Total Area is - 4 squnit. 
+
 ![Alt text](images/S3.jpg)
+
+- As you can see in the image the circular area is a silicon wafer and it has multiple cells on it and these cells are called _Die_ and the Die is made up of _Core_
+
+__core__ : A core is a the section of the chip where the fundamental logic of the design is placed.
+
+__Die__  : A die consist of core is a small semiconductor material speimen on which the fundamental circuit is fabricated. The DIE encapsulates the core.
+
+- How to arrive on dimensions ? 
+
 ![Alt text](images/S4.jpg)
+
+_Utilization Factor_ =  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Area occupied by Netlist_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————————  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Area of the core_
+
+
+
+
 ![Alt text](images/S5.jpg)
 ![Alt text](images/S6.jpg)
 ![Alt text](images/S7.jpg)
