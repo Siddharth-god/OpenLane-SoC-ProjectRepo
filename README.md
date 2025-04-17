@@ -379,7 +379,7 @@ The Total Area is - 4 squnit.
 
 __core__ : A core is a the section of the chip where the fundamental logic of the design is placed.
 
-__Die__  : A die consist of core is a small semiconductor material speimen on which the fundamental circuit is fabricated. The DIE encapsulates the core.
+__Die__  : A die consist of core is a small semiconductor material speimen on which the fundamental circuit is fabricated.The DIE encapsulates the core.
 
 - How to arrive on dimensions ? 
 
@@ -388,15 +388,43 @@ __Die__  : A die consist of core is a small semiconductor material speimen on wh
 _Utilization Factor_ =  
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Area occupied by Netlist_  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————————  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Area of the core_
 
+When the Utilization Factor is equal to 1.
 
+It means that our core is fully occupied and we canno't add any extra cell,
+so normally we go for 50% or 60% Utilization and not 100%
 
+_Aspect Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Height_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Width_
 
+- When the aspet ratio is one, it signifies that the core is __SQUARE__ Shaped and whenever the Aspect ratio is not 1 it signifies that the chip is __Rectangular__.
+
+- When the Utilization factor is anything other than the 1 then it suggests that the core is not fully utilized and we can add extra cells to it.
+
+- Here you can see the diagram explanation for better understanding.
 ![Alt text](images/S5.jpg)
 ![Alt text](images/S6.jpg)
 ![Alt text](images/S7.jpg)
+
+- Now for example if we put our 2x2 core (netlist) into the 4x4 chip then the Utilization Factor = 0.25.
+
+_Utilization Factor_ =  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_2*2 = 4_  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————————— 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_4*4 = 16_
+
+So 4/16 is 0.25
+
+- This suggest that the area occupied by the initial Netlist is 0.25 and 0.75 Area is free for Optimization.
+- The Netlist is completely connected by ideal wires which don't have any shape and size.
+
+
+2. Define Locations of the _Pre-Placed_ cells.
+
 ![Alt text](images/S8.jpg)
 ![Alt text](images/S9.jpg)
 ![Alt text](images/S10.jpg)
