@@ -397,9 +397,9 @@ It means that our core is fully occupied and we canno't add any extra cell,
 so normally we go for 50% or 60% Utilization and not 100%
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Height_  
-_Aspect Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————————
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Width_
+                    Height
+_Aspect Ratio_ =  ──────────
+                    Width
 
 - When the aspet ratio is one, it signifies that the core is __SQUARE__ Shaped and whenever the Aspect ratio is not 1 it signifies that the chip is __Rectangular__.
 
