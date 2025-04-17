@@ -270,11 +270,11 @@ command - docker
 # Now use this command to open the required package
 package require openlane 0.9
 
-# Processess to be done Before Synthesis -
-
+- Processess to be done Before Synthesis -
 # Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 
 # Design set-up stage - We need to setup a file system specific to the flow as we perform the steps we are going to fetch files from the perticular folder/location. 
+
 # This step helps the openlane to fetch the information from single file instead fetching it from two different LEF files. So were going to merge the two files together which are - lep.lep and Tlep.
 
 prep -design picorv32a
