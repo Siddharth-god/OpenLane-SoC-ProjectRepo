@@ -240,15 +240,13 @@ These are some tools we have given access to. You can see in designs and there a
 
 - __Formula__ 
 
+```
+                Number of D Flip Flops 
+Flop Ratio =   —————————————————————————
+                Total Number of Cells
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Number of D Flip Flops_  
-&nbsp;&nbsp;&nbsp;_Flop Ratio_ =  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————————
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Total Number of Cells_
-
-_Percentage of DFF's_ = Flop Ratio × 100
-
+Percentage of DFF's = Flop Ratio × 100
+```
 
 <hr>
 
@@ -330,10 +328,13 @@ data such as "results","report".
 
 ![Alt text](linux_images/D1-Sk3-Lec5-img2.png)
 
-_Flop Count_ = 1613 / 14876 = 0.108429685
+```
+               1613
+Flop Count =  ——————— = 0.108429685
+               14876
 
-_Percentage of DFF's_ = 0.108429685 * 100 = 10.8429685 %
-
+Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
+```
 
 <hr>
 
