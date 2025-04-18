@@ -358,7 +358,7 @@ Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
 <details>
 
 <hr>
-  <summary><h3>Theory</h3></summary>
+  <summary><h3>Theory - Click here to understand the process</h3></summary>
 
 ### 1. Define Height and width of core and Die.
 
@@ -467,7 +467,7 @@ Utilization Factor = ———————————————————�
 <hr>
 
 
-- ##### Conditions needs to be fulfilled.
+- #### Conditions needs to be fulfilled.
 
 ![Alt text](images/S18.jpg)
 
@@ -476,7 +476,8 @@ Utilization Factor = ———————————————————�
 - But, The problem is that the power supply is connected to the circuit using the wires and wires have some resistance and inductance to them so multiple times voltage drop happens which is not ideal for our condition.
 - When the voltage lies between Vil and Vol the logic becomes 0.
 - When  the voltage lies between Voh and Vih the logic becomes 1.
-- But, When the logic is inside the undefined region which Vih and Vil - it can go either way [logic 1 or logic 0] and we don't certainly know what it'll be and that's not good for our circuit. As you can see in the image [ The image might be blurry so apologies for that.]
+- But, When the logic is inside the undefined region which Vih and Vil - it can go either way [logic 1 or logic 0] and we don't certainly know what it'll be and that's not good for our circuit. As you can see in the image 
+[ The image might be blurry so apologies for that.]
 
 ![Alt text](images/S19.jpg)
 
