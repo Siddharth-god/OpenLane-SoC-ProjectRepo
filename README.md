@@ -360,7 +360,7 @@ Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
 <hr>
   <summary><h3>Theory</h3></summary>
 
-#### 1. Define Height and width of core and Die.
+### 1. Define Height and width of core and Die.
 
 - Basic netlist
 ![Alt text](images/S1.jpg)
@@ -427,7 +427,7 @@ Utilization Factor = ———————————————————�
 
 <hr>
 
-2. Define Locations of the _Pre-Placed_ or _Macros_ cells.
+### 2. Define Locations of the _Pre-Placed_ or _Macros_ cells.
 
 <hr>
 
@@ -462,7 +462,7 @@ Utilization Factor = ———————————————————�
 
 <hr>
 
-3. Sorrounding Pre-Placed cells with _Decoupler Capacitor_.
+### 3. Sorrounding Pre-Placed cells with _Decoupler Capacitor_.
 
 <hr>
 
