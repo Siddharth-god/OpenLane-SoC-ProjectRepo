@@ -356,6 +356,8 @@ Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
 ## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
 
 <details>
+
+<hr>
   <summary><h3>Theory</h3></summary>
 
 #### 1. Define Height and width of core and Die.
@@ -421,24 +423,79 @@ Utilization Factor = ———————————————————�
 - This suggest that the area occupied by the initial Netlist is 0.25 and 0.75 Area is free for Optimization.
 - The Netlist is completely connected by ideal wires which don't have any shape and size.
 
-
-2. Define Locations of the _Pre-Placed_ cells.
-
 ![Alt text](images/S8.jpg)
+
+<hr>
+
+2. Define Locations of the _Pre-Placed_ or _Macros_ cells.
+
+<hr>
+
+- As you can see in the image below - it's a chip and we have to decide some specific location for our logic on this chip. Which once decided we cannot change the location  later.
 ![Alt text](images/S9.jpg)
-![Alt text](images/S10.jpg)
+
+- This logic can be any complex circuit ex - Complex MUX or Any complex logic which will perform very huge tasks. This logic/circuit is the main function of our core and we implement this circuit only once and use it multiple times [i am talking about it's functionality not the actual logic]
+- As you can see in the image below we have taken one logic as an example.
+
+- We can split/cut this main circuit into two blocks and implement them seperately.
+
 ![Alt text](images/S11.jpg)
-![Alt text](images/S12.jpg)
+
+- Now, we can extend the pins of the input side and output side of the circuit after setteling it inside two blocks. As you can see in the image below and what is going on inside is not visible from outside you can see only pins and not the content inside the blocks.
+
 ![Alt text](images/S13.jpg)
+
+- Now, we seperate this two blocks and we can have two seperate Blocks/circuits which have output and input pins, You can see it in the image below.
+
 ![Alt text](images/S14.jpg)
-![Alt text](images/S15.jpg)
+- These two circuits behave as different circuits.
+- And instead of implementing the whole logic together which is very complex, we implement them in parts which makes it very easier and faster and after that we can connect this blocks together using their input and output ports multiple times.
+- And we use this blocks on the top NETLIST by implementing them _Only Once_.
+
 ![Alt text](images/S16.jpg)
+
+- This blocks have predefined locations on the main chip and that's why this are called _Pre Placed Cells_, As these cells get placed before any automated placing or routing.
+- Once the location of this cells is fixed they cannot be moved or touched by any automated routing tools. 
+- This blocks are also called MACAROS or IC'S.
+
 ![Alt text](images/S17.jpg)
+
+<hr>
+
+3. Sorrounding Pre-Placed cells with _Decoupler Capacitor_.
+
+<hr>
+
+
+- ##### Conditions needs to be fulfilled.
+
 ![Alt text](images/S18.jpg)
+
+- When the circuit is switching from logic 0 to logic 1 the capacitance between(Inside the circuit on the right side) the circuit needs to be charged by the vdd.
+- And, When the circuit is switching from logic 1 to logic 0 the capacitance between the circuit needs to be discharged by the vss(ground).
+- But, The problem is that the power supply is connected to the circuit using the wires and wires have some resistance and inductance to them so multiple times voltage drop happens which is not ideal for our condition.
+- When the voltage lies between Vil and Vol the logic becomes 0.
+- When  the voltage lies between Voh and Vih the logic becomes 1.
+- But, When the logic is inside the undefined region which Vih and Vil - it can go either way [logic 1 or logic 0] and we don't certainly know what it'll be and that's not good for our circuit. As you can see in the image [ The image might be blurry so apologies for that.]
+
 ![Alt text](images/S19.jpg)
+
+- So here comes the Decoupling capacitor.
+
+- What are _Decoupling Capacitors_ ?
+---> The __Decoupling Capacitors__ are local electrical energy reservoirs which provides a bypass path for transient currents. They are placed between power line and ground to the circuit that current is to be provided. When used as decoupling capacitors, they oppose quick changes of voltage. If the input voltage suddenly drops, the capacitor provides the energy to keep the voltage stable.
+
+- It basically means that the power supply is connected to the circuit using the wires and wires have some resistance and inductance to them so the current sometimes drop which is not ideal for our condition so to remove this problem we use these capacitors which are charged and when there is need for the power to the circuit they join the game. They get discharged after using the power and then they get pre charged from power supply.
+
 ![Alt text](images/S20.jpg)
+
+In the image above you can see there is a capacitor in parallel to the circuit.
+
 ![Alt text](images/S21.jpg)
 
+And This we we make sure our circuit is well designed for working efficiently.
+
+<hr>
 
 
 
