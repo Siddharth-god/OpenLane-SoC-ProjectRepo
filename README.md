@@ -498,8 +498,58 @@ And This we we make sure our circuit is well designed for working efficiently.
 
 <hr>
 
+### 4. Power Planning
 
+In the power planning we will see that how the power planning is done for more efficient chip design.
 
+As we can see this is our circuit which we are designing and we call it "MACRO"
+
+![Alt text](images/S23.jpg)
+
+Now this circuit, which we also call MACRO we consider it as a black box.
+
+![Alt text](images/S24.jpg)
+
+Now this macro is being repeated many times in the chip we take it as a example let's say it's repeating 4 times in our circuit.
+
+![Alt text](images/S25.jpg)
+
+If you can see in the above image there is driver and load in the circuit and there is a 16-bit BUS which connects the driver OUTPUT to the LOAD and we have to make sure that the signal from driver reaches to the load with same capacity.
+
+Now the problem is that - 
+
+We are using the same power supply to every black box or we can say MACRO as a VDD. Here the blue line shows the VDD and the grey line shows the VSS/Ground. 
+
+![Alt text](images/S26.jpg)
+
+Now let's suppose the 16-bit BUS is sending the signal as logic "0" or logic "1" so this BUS has to retain this value until this value reaches to the LOAD. 
+- In the circuit we can see that every block or MACRO has a decoupling capacitor but the BUS does not its because it is not physically possible to use decoupling capacitor in the circuit everywhere.
+
+![Alt text](images/S27.jpg)
+
+Now this 16-bit BUS is made up of 16 capacitors and each capacitor is connected to the VDD or Ground based on the value which DRIVER is sending to the LOAD. And this value is then connected to the INVERTER in the end which inverts all the values which the BUS is carrying.
+
+![Alt text](images/S28.jpg)
+
+- WHAT PROBLEM IT CREATES ?
+
+- As the O/P reaches to the input of the LOAD, All the capacitors charged by VDD starts to discharged to the ground and Vice Versa. 
+- When all the capacitors discharge their charges and connects to the ground at the same time to the one and only ground line it creates the scenario called __GROUND BOUNCE__ .
+If this bump gets into the undefined _NOISE MARGINE_ it can create a very big problem.
+
+![Alt text](images/S29.jpg)
+
+This same thing happens to the VDD line and it creates the __VOLTAGE DROOP__. 
+So here the voltage levels changes from the ideal 1 to 0 and 0 to 1 and this problem happens because of only one voltage supply.
+
+- __Problem Solving__ :
+
+![Alt text](images/S30.jpg)
+This problem can be solved by using multiple voltage and ground lines or supplies. This way whichever component needs the supply it can take it from the nearest supply line.
+and this scenario on the chip created the MESH.
+
+- POWER MESH :
+![Alt text](images/S31.jpg)
 
 </details>
 
