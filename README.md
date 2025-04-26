@@ -551,6 +551,39 @@ and this scenario on the chip created the MESH.
 - POWER MESH :
 ![Alt text](images/S31.png)
 
+### 5. Pin Placement 
+
+Lets take an design that we are going to implement on our chip it has pre-placed cells in it and we're going to make this circuit accroding to the placment of this pre-placed cells.
+This connectivity of the circuit is defined in VHDL and this specific connectivity of the gates is called "NETLIST"
+NETLIST = Connectivity Information between defferent gates.
+
+Now as you can see in the image below we have two different designs with different inputs and outputs and clocks i/p and o/ps.
+We then connect this two designs together using the wires to make our main circuit and then we are going to place this circuit on our chip so that the inputs will come closer to their desired locations. 
+
+![Alt text](images/S32.png)
+
+![Alt text](images/S33.png)
+
+![Alt text](images/S34.png)
+
+If you see in the image below you can see that the Din4 is placed in the start because it goes to the __BLOCK A__ which is already placed and it's location cannot be changed so we have to keep that in mind when we create the new circuit over this "BLOCKS". Now for __BLOCK B__ we can use the buffers to connect it to clkout.
+
+![Alt text](images/S35.png)
+
+So now we have our inputs on the left  side and outputs on the right side of the chip - we can definitely choose the location according to design or designer's choice. so now the input and output pins are placed on empty place. 
+
+If you see all the ports are outside of the "BLOCK" area because nothing can be placed in that area.
+
+The clock ports are bigger in area because clk ports input continuously sends the signal to the flip-flops in the circuit, so these are the ones who drives the whole circuit so we have to make their path bigger so they can have lower resistence.
+It's also is the same for the clkout as it takes everythig out of the circuit alone so it needs lower resistance.
+
+- __BLOCKING__ :
+
+The blocking means covering which is used to block the i/p and o/p port area so that automated placement and routing tool dosen't place any cells in that area so we use "_logical cell placement blockage_" to seal the area ensuring that nothing gets placed near the are of pins. You can see it in the image below.
+![Alt text](images/S36.png)
+
+
+### 6. 
 </details>
 
 
