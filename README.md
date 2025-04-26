@@ -545,7 +545,7 @@ So here the voltage levels changes from the ideal 1 to 0 and 0 to 1 and this pro
 - __Problem Solving__ :
 
 ![Alt text](images/S30.jpg)
-This problem can be solved by using multiple voltage and ground lines or supplies. This way whichever component needs the supply it can take it from the nearest supply line.
+This problem can be solved by using multiple voltage and ground lines or supplies. This way whichever component needs the supply it can take it from the nearest supply line. As you can see there are vertical and horizontal lines on the chip area.s
 and this scenario on the chip created the MESH.
 
 - POWER MESH :
