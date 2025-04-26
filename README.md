@@ -504,7 +504,7 @@ In the power planning we will see that how the power planning is done for more e
 
 As we can see this is our circuit which we are designing and we call it "MACRO"
 
-![Alt text](images/S23.jpg)
+![Alt text](images/S23.png)
 
 Now this circuit, which we also call MACRO we consider it as a black box.
 
