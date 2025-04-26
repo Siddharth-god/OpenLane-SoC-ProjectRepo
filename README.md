@@ -529,18 +529,18 @@ Now this 16-bit BUS is made up of 16 capacitors and each capacitor is connected 
 
 ![Alt text](images/S27.png)
 
-![Alt text](images/S28.png)
-
 - WHAT PROBLEM IT CREATES ?
 
 - As the O/P reaches to the input of the LOAD, All the capacitors charged by VDD starts to discharged to the ground and Vice Versa. 
 - When all the capacitors discharge their charges and connects to the ground at the same time to the one and only ground line it creates the scenario called __GROUND BOUNCE__ .
 If this bump gets into the undefined _NOISE MARGINE_ it can create a very big problem.
 
-![Alt text](images/S29.png)
+![Alt text](images/S28.png)
 
 This same thing happens to the VDD line and it creates the __VOLTAGE DROOP__. 
 So here the voltage levels changes from the ideal 1 to 0 and 0 to 1 and this problem happens because of only one voltage supply.
+
+![Alt text](images/S29.png)
 
 - __Problem Solving__ :
 
