@@ -520,14 +520,14 @@ Now the problem is that -
 
 We are using the same power supply to every black box or we can say MACRO as a VDD. Here the blue line shows the VDD and the grey line shows the VSS/Ground. 
 
+Now let's suppose the 16-bit BUS is sending the signal as logic "0" or logic "1" so this BUS has to retain this value until this value reaches to the LOAD. 
+In the circuit we can see that every block or MACRO has a decoupling capacitor but the BUS does not its because it is not physically possible to use decoupling capacitor in the circuit everywhere.
+
 ![Alt text](images/S26.png)
 
-Now let's suppose the 16-bit BUS is sending the signal as logic "0" or logic "1" so this BUS has to retain this value until this value reaches to the LOAD. 
-- In the circuit we can see that every block or MACRO has a decoupling capacitor but the BUS does not its because it is not physically possible to use decoupling capacitor in the circuit everywhere.
+Now this 16-bit BUS is made up of 16 capacitors and each capacitor is connected to the VDD or Ground based on the value which DRIVER is sending to the LOAD. And this value is then connected to the INVERTER in the end which inverts all the values which the BUS is carrying.
 
 ![Alt text](images/S27.png)
-
-Now this 16-bit BUS is made up of 16 capacitors and each capacitor is connected to the VDD or Ground based on the value which DRIVER is sending to the LOAD. And this value is then connected to the INVERTER in the end which inverts all the values which the BUS is carrying.
 
 ![Alt text](images/S28.png)
 
