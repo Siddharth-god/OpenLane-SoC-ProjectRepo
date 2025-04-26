@@ -574,8 +574,8 @@ So now we have our inputs on the left  side and outputs on the right side of the
 
 If you see all the ports are outside of the "BLOCK" area because nothing can be placed in that area.
 
-The clock ports are bigger in area because clk ports input continuously sends the signal to the flip-flops in the circuit, so these are the ones who drives the whole circuit so we have to make their path bigger so they can have lower resistence.
-It's also is the same for the clkout as it takes everythig out of the circuit alone so it needs lower resistance.
+The clock ports are bigger in area because clk ports input continuously sends the signal to the flip-flops in the circuit, so these are the ones who drives the whole circuit therefore we have to make their path bigger so they can have lower resistence.
+It's also is the same for the clkout as it takes everythig out of the circuit alone therefore it needs lower resistance.
 
 - __BLOCKING__ :
 
