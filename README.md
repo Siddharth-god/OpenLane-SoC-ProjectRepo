@@ -588,14 +588,13 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 
 ## Implementation
 
-<h4> Objectives <h4>
+#### Objectives :
 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 2. Calculate the die area in microns from the values in floorplan def.
 3. Load generated floorplan def in magic tool and explore the floorplan.
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 5. Load generated placement def in magic tool and explore the placement.
-
 
 ```
 Area of die in microns = Die width in microns * Die height in microns
