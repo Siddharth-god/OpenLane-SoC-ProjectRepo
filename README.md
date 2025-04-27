@@ -596,7 +596,9 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 5. Load generated placement def in magic tool and explore the placement.
 
-```Area of die in microns = Die width in microns * Die height in microns
+
+```
+Area of die in microns = Die width in microns * Die height in microns
 ```
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
@@ -635,6 +637,7 @@ run_floorplan
 #### 2. Let's Calculate the die area in microns from the values in floorplan def.
 
 - Screenshot of contents of floorplan def
+
 ![Alt text](linux_images/run_floorplan3.png)
 
 ```
