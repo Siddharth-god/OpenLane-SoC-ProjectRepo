@@ -588,6 +588,7 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 
 ## Implementation
 
+
 #### Objectives :
 
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
@@ -599,7 +600,11 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 ```
 Area of die in Microns = Die width in Microns x Die height in Microns
 ```
+<hr>
+
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+
+<hr>
 
 - Commands to invoke the OpenLANE flow and perform floorplan.
 
@@ -635,6 +640,8 @@ run_floorplan
 
 #### 2. Let's Calculate the die area in microns from the values in floorplan def.
 
+<hr> 
+
 - Screenshot of contents of floorplan def
 
 ![Alt text](linux_images/run_floorplan3.png)
@@ -663,6 +670,8 @@ Area of die in microns = 660.685 ∗ 671.405 = 443587.212425
 
 #### 3. Load generated floorplan def in magic tool and explore the floorplan.
 
+<hr>
+
 Commands to load floorplan def in magic in another terminal
 
 ```bash
@@ -677,6 +686,42 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![Alt text](linux_images/magic_op1.png)
 
 - Equidistant placement of ports
+
+![Alt text](linux_images/magic_op4.png)
+
+- Port layer as set through config.tcl
+
+![Alt text](linux_images/magic_op3.png)
+![Alt text](linux_images/magic_op6.png)
+
+- Decap Cells and Tap Cells
+
+![Alt text](linux_images/magic_op2.png)
+
+- Diogonally equidistant Tap cells
+
+![Alt text](linux_images/magic_op7.png)
+
+- Unplaced standard cells at the origin
+
+![Alt text](linux_images/magic_op8.png)
+![Alt text](linux_images/magic_op9.png)
+
+#### 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+
+<hr>
+
+- Command to run placement
+```bash
+# Congestion aware placement by default
+run_placement
+```
+
+
+
+
+
+
 
 
 
