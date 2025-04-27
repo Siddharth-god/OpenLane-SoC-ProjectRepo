@@ -597,7 +597,7 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 5. Load generated placement def in magic tool and explore the placement.
 
 ```
-Area of die in microns = Die width in microns * Die height in microns
+Area of die in Microns = Die width in Microns x Die height in Microns
 ```
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
