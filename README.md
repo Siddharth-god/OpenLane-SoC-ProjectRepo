@@ -581,7 +581,7 @@ It's also is the same for the clkout as it takes everythig out of the circuit al
 
 The blocking means covering which is used to block the i/p and o/p port area so that automated placement and routing tool dosen't place any cells in that area so we use "_logical cell placement blockage_" to seal the area ensuring that nothing gets placed near the are of pins. You can see it in the image below.
 ![Alt text](images/S36.png)
-
+.
 
 ### 6. 
 </details>
