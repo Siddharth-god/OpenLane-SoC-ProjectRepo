@@ -581,9 +581,100 @@ It's also is the same for the clkout as it takes everythig out of the circuit al
 
 The blocking means covering which is used to block the i/p and o/p port area so that automated placement and routing tool dosen't place any cells in that area so we use "_logical cell placement blockage_" to seal the area ensuring that nothing gets placed near the are of pins. You can see it in the image below.
 ![Alt text](images/S36.png)
-.
-
-### 6. 
+ 
 </details>
+
+<hr>
+
+## Implementation
+
+<h4> Objectives <h4>
+
+1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+2. Calculate the die area in microns from the values in floorplan def.
+3. Load generated floorplan def in magic tool and explore the floorplan.
+4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+5. Load generated placement def in magic tool and explore the placement.
+
+```Area of die in microns = Die width in microns * Die height in microns
+```
+#### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+
+- Commands to invoke the OpenLANE flow and perform floorplan.
+
+```bash
+# Change directory to openlane flow directory
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+
+```
+```bash
+# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+
+# Now we can run floorplan
+run_floorplan
+```
+- Screenshots of the floorplan run 
+
+![Alt text](linux_images/run_floorplan1.png)
+![Alt text](linux_images/run_floorplan2.png)
+
+#### 2. Let's Calculate the die area in microns from the values in floorplan def.
+
+- Screenshot of contents of floorplan def
+![Alt text](linux_images/run_floorplan3.png)
+
+```
+According to the floorplan def :
+
+1000 units distance = 1 micron
+Die witdth in unit distance = 660685 - 0 = 660685
+Die height in unit distance = 671405 - 0 = 671405
+
+                         Value in unit distance 
+Distance in microns =  —————————————————————————
+                         1000
+
+                        660685
+Die width in microns = ———————— = 660.685 Microns
+                         1000
+
+                        671405
+Die width in microns = ———————— = 671.405 Microns
+                         1000
+                        
+Area of die in microns = 660.685 ∗ 671.405 = 443587.212425
+```
+
+#### 3. Load generated floorplan def in magic tool and explore the floorplan.
+
+Commands to load floorplan def in magic in another terminal
+
+```bash
+# Change directory to path containing generated floorplan def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+
+# Command to load the floorplan def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+- Screenshots of floorplan def in magic :
+
+![Alt text](linux_images/magic_op1.png)
+
+- Equidistant placement of ports
+
 
 
