@@ -608,19 +608,20 @@ Now, we have our floorplan ready with all the inputs, we now have our NETLIST an
 
 And we are going to place this NETLIST on the floorplan. Now we can't put the NETLIST exactly as in the diagram on the FLOORPLAN but because of that reason we have our physical view ready. And now we will do the connection according to the NETLIST.
 
-Now, while placing the physical view on the floor we make sure that the pre-placed cells area won't be touched during this process and we will put the cells in a way that they will come closer to their desired I/P and O/P pins. You can see the image.
-
+Now, while placing the physical view on the floor we make sure that the pre-placed cells area won't be touched during this process and we will put the cells in a way that they will come closer to their desired I/P and O/P pins. 
 Placement of the cells :
 
-- Section 1 - Here, we put the cells directly as the physical view shows.
-- Section 2 - Here, we put the cells very close to each other which reduce the delay between them
-- Section 3 - Here, The Din and Dout are very far from each other and they are in the cross format which makes the placement very   hard so we have to set them properly using buffers for keeping the information signal intact.
+- Section (Orange) - Here, we put the cells directly as the physical view shows.
+- Section (Yellow) - Here, we put the cells very close to each other which reduce the delay between them
+- Section (Blue) - Here, The Din and Dout are very far from each other and they are in the cross format which makes the placement very   hard so we have to set them properly using buffers for keeping the information signal intact.
 
-- Sectio 4 - Here it's the same as the section 3 
+- Sectio (Green) - Here it's the same as the section 3 
+
+![Alt text](images/S40.png)
 
 ![Alt text](images/S41.png)
 
-![Alt text](images/S40.png)
+![Alt text](images/S41-2.png)
 
 ### 3. Optimized Placement
 
@@ -629,7 +630,7 @@ The placement gets so messy after placing the cells so we have to solve this usi
 Here we can do the Estimation [ to send the actual information from input to the flip-flop we will use Repeators/buffers to sustain the information for a long route ] - So it's like two people are standing on the sides of the river and they are trying to communicate but their voice can't cover the long distance so we use one or two or even three people on the boats and they pass the information to the other side. So this is how the buffers work.
 This Process is called __System integrity__.
 
-How the buffers work --> This repeators that we are using will create the replica of the original signal and sends it to the next repeator and that repeator will do the same. This way the signal integrity is maintained 
+How the buffers work --> This repeators that we are using will create the replica of the original signal and sends it to the next repeator and that repeator will do the same. This way the signal integrity is maintained - And this process is done by doing the transition analysis to check whether we need the buffer or not. 
 
 Drawback - This process takes too much place.
 
@@ -638,6 +639,9 @@ Drawback - This process takes too much place.
 
 ![Alt text](images/S43.png)
 
+![Alt text](images/S44.png)
+
+![Alt text](images/S45.png)
 
 </details>
 
