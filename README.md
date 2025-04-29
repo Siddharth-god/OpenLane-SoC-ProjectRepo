@@ -581,7 +581,64 @@ It's also is the same for the clkout as it takes everythig out of the circuit al
 
 The blocking means covering which is used to block the i/p and o/p port area so that automated placement and routing tool dosen't place any cells in that area so we use "_logical cell placement blockage_" to seal the area ensuring that nothing gets placed near the are of pins. You can see it in the image below.
 ![Alt text](images/S36.png)
- 
+
+#### Now with this process our Floorplanning is completed - Now let's see how to place the NETLIST on this floor that we've made.
+
+### 1. Binding NETLIST with physical cells.
+
+All the gates and flip-flops you can see on the image have different shapes but in reality those cells are squared shape. 
+
+These all cells [ flip-flops , gates , etc] are stored or we can say are present in one SHELF and we can call it LIBRARY.
+
+So this Library is like a real life library where all kinds of books are present - in this library we have all the Timing information [like delay] present in it. Also it'll have shape and size information in the shell plus it'll have the required condition on which the circuit works - This all information is present in Library.
+
+Also, In this Library we have different properties of the cells like the different size of the cells to create low-resistance if we want and we can choose this sizes of the cells based on the space the chip can afford. 
+
+Here are the images for better understanding -
+
+![Alt text](images/S37.png)
+
+![Alt text](images/S38.png)
+
+![Alt text](images/S39.png)
+
+### 2. Placement
+
+Now, we have our floorplan ready with all the inputs, we now have our NETLIST and also the physical view of the logic gates.
+
+And we are going to place this NETLIST on the floorplan. Now we can't put the NETLIST exactly as in the diagram on the FLOORPLAN but because of that reason we have our physical view ready. And now we will do the connection according to the NETLIST.
+
+Now, while placing the physical view on the floor we make sure that the pre-placed cells area won't be touched during this process and we will put the cells in a way that they will come closer to their desired I/P and O/P pins. You can see the image.
+
+Placement of the cells :
+
+- Section 1 - Here, we put the cells directly as the physical view shows.
+- Section 2 - Here, we put the cells very close to each other which reduce the delay between them
+- Section 3 - Here, The Din and Dout are very far from each other and they are in the cross format which makes the placement very   hard so we have to set them properly using buffers for keeping the information signal intact.
+
+- Sectio 4 - Here it's the same as the section 3 
+
+![Alt text](images/S41.png)
+
+![Alt text](images/S40.png)
+
+### 3. Optimized Placement
+
+The placement gets so messy after placing the cells so we have to solve this using __Optimized Placement__
+
+Here we can do the Estimation [ to send the actual information from input to the flip-flop we will use Repeators/buffers to sustain the information for a long route ] - So it's like two people are standing on the sides of the river and they are trying to communicate but their voice can't cover the long distance so we use one or two or even three people on the boats and they pass the information to the other side. So this is how the buffers work.
+This Process is called __System integrity__.
+
+How the buffers work --> This repeators that we are using will create the replica of the original signal and sends it to the next repeator and that repeator will do the same. This way the signal integrity is maintained 
+
+Drawback - This process takes too much place.
+
+
+![Alt text](images/S42.png)
+
+![Alt text](images/S43.png)
+
+
 </details>
 
 <hr>
