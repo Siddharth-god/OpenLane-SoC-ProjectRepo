@@ -802,6 +802,101 @@ Placement of Standard cells
 
 <hr>
 
+<details>
+  <summary><h3>Theory - Cell Design flow.<h3></summary>
+
+- Basic theory about how the cell is designed internally -
+The cells you can see in the image below are called standard cells. These standard cells are placed in library - The Library also contains the pre-placed cells.
+The library contains all typical cells like Flip-Flops, AND, OR, Inverters, Latches etc. and it also contains all this cells with their different sizes and their different functionalities.
+![Alt text](images/S46.png)
+
+![Alt text](images/S47.png)
+
+![Alt text](images/S48.png)
+
+Now, All this cells in the library has their own design flow. 
+Let's take the inverter as an example -
+- Now to design the normal inverter there is very big stage -
+![Alt text](images/S49.png)
+
+#### 1. Inputs
+- __DRC & LVS Rules__ - This rules are given by foundry and there could be thousands of rules that a design should follow
+![Alt text](images/S50.png)
+
+- __Spice model parameters__ - This are the model files given by the foundry itself according to our design parameters. This model files have parameters like Vth, Capacitors values, VDD values and etc etc.
+![Alt text](images/S51.png)
+
+- __Library and User-Defined specializations__ - This are some specializations which are given by the user or the Top designer and the designers have to design this specialization according to the orders.
+for example - 
+
+1) Cell Height - This is defined by the seperation between the power and ground rails the above one is power rail and the next one is the ground rail and that is the height of the cell and it's fixed once designed.
+
+2) Cell Width - This is derived by the drive strength of the cells Higher the drive strength is better because the cells with higher drive strength can drive the longer wires while short drive strength cannot do that.
+
+This is the responsibility of the designer to define the drive strength and this is specialization asked by the user and the designer has to follow that spcification.
+
+3) Supply voltage - A cell has to operate at a certain supply voltage that has been provided by the top level designer and according to that the library developer has to design the library cell that works on the given supply voltage.
+![Alt text](images/S52.png)
+![Alt text](images/S53.png)
+
+4) Metal Layer - Which part will go on which metal layer is given by the user and the designer has to use that infomation to design accordingly.
+
+5) Pin location - Library developer has to design the pin location based on the need of the user.
+![Alt text](images/S54.png)
+
+#### 2. Design setup 
+
+1) Circuit design -
+
+step 1 - Implementation of the function itself
+step 2 - Modeling the PMOS and NMOS transistors to meet the library requirments
+![Alt text](images/S55.png)
+
+2) Layout design -
+
+step 1 - First design the function and then derive the network graph for the PMOS and NMOS transistors
+step 2 - Get the Euler's path
+step 3 - Stick diagram based on the circuit diagram
+step 4 - Convert that stick diagram into the physical layout according to the DRC rules which are given by foundry and by top level designer.
+step 5 - Then we use EDA tool to create the Neat Layout design.
+
+![Alt text](images/S56.png)
+![Alt text](images/S57.png)
+
+This is the final library layout design.
+![Alt text](images/S58.png)
+
+#### Characterization 
+
+Characterization gives us Timing, noise, power and the funcitionality of the NETLIST.
+
+Steps to perform the characterization - 
+
+1) Read into the model files PMOS and NMOS.
+2) Read the extracted spice netlist
+3) Recognize the behaviour of the buffer
+4) Read the subcircuit of the inverter 
+5) Attach the power supply 
+6) Apply the stimulus
+7) Provide the necessary load capacitance
+8) Provide the necessary simulation command ex - .tran
+9) Feed all inputs in the form of config file to the software GUNA and then we can generate the timing, noise and power.
+
+Here are all the related images - Step by Step
+![Alt text](images/S59.png)
+![Alt text](images/S60.png)
+![Alt text](images/S61.png)
+![Alt text](images/S62.png)
+![Alt text](images/S63.png)
+![Alt text](images/S64.png)
+![Alt text](images/S65.png)
+![Alt text](images/S66.png)
+
+This is how the characterization is done. This is not explained in details but it's only a roadmap fo the Cell design flow.
+
+This whole process is for only one small inverter with one input and output. Crazy ha...
+</details>
+
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
 
 <details>
