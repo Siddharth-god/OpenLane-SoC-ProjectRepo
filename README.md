@@ -584,6 +584,8 @@ The blocking means covering which is used to block the i/p and o/p port area so 
 
 #### Now with this process our Floorplanning is completed - Now let's see how to place the NETLIST on this floor that we've made.
 
+<hr>
+
 ### 1. Binding NETLIST with physical cells.
 
 All the gates and flip-flops you can see on the image have different shapes but in reality those cells are squared shape. 
@@ -601,6 +603,8 @@ Here are the images for better understanding -
 ![Alt text](images/S38.png)
 
 ![Alt text](images/S39.png)
+
+<hr>
 
 ### 2. Placement
 
@@ -622,6 +626,8 @@ Placement of the cells :
 ![Alt text](images/S41.png)
 
 ![Alt text](images/S41-2.png)
+
+<hr>
 
 ### 3. Optimized Placement
 
@@ -645,11 +651,7 @@ Drawback - This process takes too much place.
 
 </details>
 
-<hr>
-
 ## Implementation
-
-<hr>
 
 #### Objectives :
 
@@ -665,8 +667,6 @@ Area of die in Microns = Die width in Microns x Die height in Microns
 <hr>
 
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
-
-<hr>
 
 - Commands to invoke the OpenLANE flow and perform floorplan.
 
@@ -700,9 +700,10 @@ run_floorplan
 ![Alt text](linux_images/run_floorplan1.png)
 ![Alt text](linux_images/run_floorplan2.png)
 
-#### 2. Let's Calculate the die area in microns from the values in floorplan def.
+<hr>
 
-<hr> 
+#### 2. Let's Calculate the die area in microns from the values in floorplan def.
+ 
 
 - Screenshot of contents of floorplan def
 
@@ -729,10 +730,10 @@ Die width in microns = ———————— = 671.405 Microns
                         
 Area of die in microns = 660.685 ∗ 671.405 = 443587.212425
 ```
+<hr>
 
 #### 3. Load generated floorplan def in magic tool and explore the floorplan.
 
-<hr>
 
 Commands to load floorplan def in magic in another terminal
 
@@ -769,9 +770,11 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![Alt text](linux_images/magic_op8.png)
 ![Alt text](linux_images/magic_op9.png)
 
+<hr>
+
 #### 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 
-<hr>
+
 
 - Command to run placement
 ```bash
@@ -783,6 +786,8 @@ Run placement screenshots
 ![Alt text](linux_images/run_placement.png)
 
 ![Alt text](linux_images/run_placement2.png)
+
+<hr>
 
 ### 5. Load generated placement def in magic tool and explore the placement.
 
@@ -807,18 +812,12 @@ Placement of Standard cells
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
 
-<hr>
-
 <details>
   <summary><h3>Theory - Click "Theory" to expand.<h3></summary>
 
 </details>
 
-<hr>
-
 ## Implementation
-
-<hr>
 
 #### Objectives :
 
