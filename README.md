@@ -250,8 +250,8 @@ Percentage of DFF's = Flop Ratio × 100
 
 <hr>
 
-##### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
-#### Commands to invoke the OpenLANE flow and perform synthesis.
+#### 1.Run Desing Synthesis for "picorv32a" using OpenLANE & generate necessery outputs.
+##### Commands to invoke the OpenLANE flow and perform synthesis.
 ```bash
 # As we work in Openlane we have to first change our directory to openlane flow directory. Just type -
 
@@ -265,7 +265,6 @@ command - docker
 
 # After running docker the "bash" directory will get opened where we're gonna work
 ```
-<hr>
 
 ```bash
 # As we've entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
@@ -319,7 +318,6 @@ data such as "results","report".
 
 ![Alt text](linux_images/synthesis-img2.png)
 
-<hr>
 
 - ### Flop count 
 
@@ -335,8 +333,6 @@ Flop Count =  ——————— = 0.108429685
 
 Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
 ```
-
-<hr>
 
 ### Here you can see the RESULT and the REPORT by running these commands and the files 
 ### inside are the whole data of it. 
@@ -357,7 +353,6 @@ Percentage of DFF's = 0.108429685 x 100 = 10.8429685 %
 
 <details>
 
-<hr>
   <summary><h3>Theory - Click here to understand the process</h3></summary>
 
 ### 1. Define Height and width of core and Die.
@@ -429,8 +424,6 @@ Utilization Factor = ———————————————————�
 
 ### 2. Define Locations of the _Pre-Placed_ or _Macros_ cells.
 
-<hr>
-
 - As you can see in the image below - it's a chip and we have to decide some specific location for our logic on this chip. Which once decided we cannot change the location  later.
 ![Alt text](images/S9.jpg)
 
@@ -463,9 +456,6 @@ Utilization Factor = ———————————————————�
 <hr>
 
 ### 3. Sorrounding Pre-Placed cells with _Decoupler Capacitor_.
-
-<hr>
-
 
 - #### Conditions needs to be fulfilled.
 
@@ -550,6 +540,8 @@ and this scenario on the chip created the MESH.
 
 - POWER MESH :
 ![Alt text](images/S31.png)
+
+<hr>
 
 ### 5. Pin Placement 
 
