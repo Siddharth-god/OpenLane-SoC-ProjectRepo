@@ -649,6 +649,7 @@ Drawback - This process takes too much place.
 
 ## Implementation
 
+<hr>
 
 #### Objectives :
 
@@ -777,6 +778,63 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 # Congestion aware placement by default
 run_placement
 ```
+Run placement screenshots
+
+![Alt text](linux_images/run_placement.png)
+
+![Alt text](linux_images/run_placement2.png)
+
+### 5. Load generated placement def in magic tool and explore the placement.
+
+Commands to load placement def in magic in another terminal
+
+```bash
+# Change directory to path containing generated placement def
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/placement/
+
+# Command to load the placement def in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+Floorplan def screenshot in magic
+
+![Alt text](linux_images/placement_op.png)
+
+Placement of Standard cells
+
+![Alt text](linux_images/placement_op2.png)
+
+<hr>
+
+## Day 3 - Design library cell using Magic Layout and ngspice characterization.
+
+<hr>
+
+<details>
+  <summary><h3>Theory - Click "Theory" to expand.<h3></summary>
+
+</details>
+
+<hr>
+
+## Implementation
+
+<hr>
+
+#### Objectives :
+
+1. Clone custom inverter standard cell design from github repository: Standard cell design and characterization using OpenLANE flow.
+2. Load the custom inverter layout in magic and explore.
+3. Spice extraction of inverter in magic.
+4. Editing the spice model file for analysis through simulation.
+5. Post-layout ngspice simulations.
+6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+
+
+
+
+
+
+
 
 
 
