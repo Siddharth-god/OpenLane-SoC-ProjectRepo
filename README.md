@@ -800,10 +800,8 @@ Placement of Standard cells
 
 ![Alt text](linux_images/placement_op2.png)
 
-<hr>
-
 <details>
-  <summary><h2>Theory - Cell Design flow.<h2></summary>
+  <summary><h2><italic>Theory - Cell Design flow.</italic><h2></summary>
 
 - Basic theory about how the cell is designed internally -
 The cells you can see in the image below are called standard cells. These standard cells are placed in library - The Library also contains the pre-placed cells.
@@ -944,6 +942,7 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 
 </details>
 
+<hr>
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
 
