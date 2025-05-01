@@ -895,6 +895,53 @@ Here are all the related images - Step by Step
 This is how the characterization is done. This is not explained in details but it's only a roadmap fo the Cell design flow.
 
 This whole process is for only one small inverter with one input and output. Crazy ha...
+
+## Timing Characterization
+
+- Formula for finding the propogation delay and Transition time.
+
+```
+Propogation Delay :
+
+Propogation Rise Delay = Time(out_rise_thr) - Time(in_rise_thr)
+
+Propogation Fall Delay = Time(out_fall_thr) - Time(in_fall_thr)
+
+--------------------------------------------------------------------------
+Transition Time :
+
+Transition Rise Time = Time(slew_high_rise_thr) - Time(slew_low_rise_thr)
+
+Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
+```
+
+- Typical values of __Threshold points__ on input and output waveforms for DELAY and TRANSITION TIME Measurment.
+![Alt text](images/S67.png)
+
+- Propogation Delay :
+![Alt text](images/S69.png)
+
+![Alt text](images/S68.png)
+
+- We have to select the threshold points to get the perfect delay value if we take the wrong delay points we will get the (-ve) delay value which is not correct.
+
+![Alt text](images/S70.png)
+
+- Sometimes we get (-ve) delay values even with the correct threshold points. Although this is very rare but it happens and it is because higher slew in the waveform and this happens due to long wires in between the transistors so they give the longer slew and due to that our output waveform comes before input, And even when we use the correct threshold points we get the (-ve) value. So we might have to alter the points accordingly.
+
+![Alt text](images/S71.png)
+
+![Alt text](images/S72.png)
+
+- Transition Time :
+
+- This is how we find the transition time. The formula is given at the start of the topic.
+![Alt text](images/S73.png)
+
+![Alt text](images/S74.png)
+
+![Alt text](images/S75.png)
+
 </details>
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
