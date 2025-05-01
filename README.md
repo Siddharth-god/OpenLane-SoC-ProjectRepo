@@ -803,7 +803,7 @@ Placement of Standard cells
 <hr>
 
 <details>
-  <summary><h3>Theory - Cell Design flow.<h3></summary>
+  <summary><h2>Theory - Cell Design flow.<h2></summary>
 
 - Basic theory about how the cell is designed internally -
 The cells you can see in the image below are called standard cells. These standard cells are placed in library - The Library also contains the pre-placed cells.
@@ -918,7 +918,7 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 - Typical values of __Threshold points__ on input and output waveforms for DELAY and TRANSITION TIME Measurment.
 ![Alt text](images/S67.png)
 
-- Propogation Delay :
+- 1) Propogation Delay :
 ![Alt text](images/S69.png)
 
 ![Alt text](images/S68.png)
@@ -933,7 +933,7 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 
 ![Alt text](images/S72.png)
 
-- Transition Time :
+- 2) Transition Time :
 
 - This is how we find the transition time. The formula is given at the start of the topic.
 ![Alt text](images/S73.png)
@@ -943,6 +943,7 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 ![Alt text](images/S75.png)
 
 </details>
+
 
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
 
