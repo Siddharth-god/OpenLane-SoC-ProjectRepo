@@ -962,6 +962,40 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 5. Post-layout ngspice simulations.
 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
 
+#### 1. Clone custom inverter standard cell design from github repository
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Clone the repository with custom inverter design 
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+# Change into repository directory from openlane directory using
+cd vsdstdcelldesign
+
+# Open new Tab and Change the directory to magic 
+cd Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic 
+
+# Copy magic tech file to the repo directory for easy access
+cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
+
+# Check contents whether everything is present
+ls -ltr
+
+# Command to open custom inverter layout in magic
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+![Alt text](linux_images/clone.png)
+![Alt text](linux_images/path.png)
+![Alt text](linux_images/copy_techfile.png)
+![Alt text](linux_images/copied.png)
+
+#### 2. Load the custom inverter layout in magic and explore.
+
+Screenshot of custom inverter layout in magic
+![Alt text](linux_images/inverter.png)
 
 
 
