@@ -949,6 +949,68 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 <details>
   <summary><h3>Theory - Click "Theory" to expand.<h3></summary>
 
+- VTC Spice simulation
+
+1) Creating the spice deck
+- Component connectivity 
+- Component Values 
+- Identify nodes
+    How do we decide nodes ?
+    --> To decide nodes there should be a component in between of these nodes if there is no component we do not consider it as a node.
+- Name the nodes
+![Alt text](images/S76.png)
+![Alt text](images/S77.png)
+
+2) Writing the spice deck or we can say the netlist for INVERTER.
+
+- This is the syntax for setting the connection information of CMOS
+
+Transistor - drain - gate - source - substrate - transistor name - width - length (ex- M1 out in vdd vdd pmos w=0.375u L=0.25u)
+.op , .dc , .tran are all the simulation commands there are other commands as well and this start from (.--command--)
+![Alt text](images/S78.png)
+![Alt text](images/S79.png)
+
+3) This is how model file look if you are not familiar with it -
+
+![Alt text](images/S80.png)
+![Alt text](images/S81.png)
+
+4) Waveform when PMOS and NMOS W/L ratio was same.
+![Alt text](images/S82.png)
+
+5) Waveform when PMOS ratio is greater than the NMOS ratio. Usually we have to set the PMOS bigger as NMOS is already powerful than PMOS so that is the reason why we make PMOS stronger than NMOS to make them equal.
+
+![Alt text](images/S83.png)
+![Alt text](images/S84.png)
+
+- Static behaviour : CMOS inverter Robustness
+
+1) Switching threshold , Vm (Vm is the point where Vin = Vout)
+
+You can see the intersection/diagonal line on the graph which shows us the Vm. The Vm lies in the saturation region where so much current can get leaked due to Vin = Vout
+
+You can see in the image below that our Idsp = -Idsn it means that our Vgs = Vds (The Drain current from PMOS is going towards capacitor and the Drain current of NMOS is going opposite and it is almost equal) The current from Vdd to Vout which is going through the PMOS is equal to the current to the current from capacitor to the NMOS so thats why we say Vds = Vgs.
+![Alt text](images/S85.png)
+![Alt text](images/S86.png)
+
+2) Dynamic simulation
+
+- In the dynamic simulation our whole NETLIST remains the same only the pulse and the .tran command gets added in the NETlist
+
+- Transit analysis :
+ 
+Using this analysis we can calculate the rise and fall delay.
+
+- Process to calculate the delay :
+
+To calculate the delay we just need to select the desired area on the waveform and then we have to click on the point and we will get that point's fall or rise time whatever we are calculating will come on the screen of the ngspice and then we have to the calculator to find the delay by substraction it accprding to the formulas which you can see on the image below.
+![Alt text](images/S87.png)
+![Alt text](images/S89.png)
+![Alt text](images/S90.png)
+![Alt text](images/S91.png)
+
+
+
 </details>
 
 ## Implementation
