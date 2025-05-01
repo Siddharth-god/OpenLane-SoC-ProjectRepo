@@ -954,7 +954,8 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 1) Creating the spice deck
 - Component connectivity 
 - Component Values 
-- Identify nodes
+- Identify nodes :
+
     How do we decide nodes ?
     --> To decide nodes there should be a component in between of these nodes if there is no component we do not consider it as a node.
 - Name the nodes
