@@ -1014,14 +1014,14 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 ### 16 MASK CMOS Process
 
-- Step 1 - We have to do is selecting a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
+#### - Step 1 - What we have to do is select a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
 
-- Step 2 - Creating active region for transistors. In that step 2, there are two steps.
+#### - Step 2 - Creating active region for transistors. In that step 2, there are two steps.
 
 1) Creating isolation between p-substrate and active packets using 40nm silicon dioxide(SiO2) layer which acts as insulator. 
 2) We deposit 80nm layer of Si3N4 onto 40nm silicon dioxide.
 
-- Step 3 - Creating the Pockets
+#### - Step 3 - Creating the Pockets
 
 1) Identify the region where to grow the pockets. So, first we have to grow the photoresist film of 1 micron onto the 80nm silicon nitrate(Si3N4)
 
@@ -1041,7 +1041,7 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 After that we strip out the silicon nitrate layer Si3N4 in the hot phosphoric acid and then we get our SiO2 isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
 
-- Step 4 - N-Well and P-Well
+#### - Step 4 - N-Well and P-Well
 
 Now our oxidation process has been completed. So we have to create n-well and p-well. So the procedure for n-well and p-well is like this.  
 
