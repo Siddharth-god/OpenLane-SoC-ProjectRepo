@@ -1081,11 +1081,40 @@ You can see the images below.
 
 ![Alt text](images/S106.png)
 
-### - Step 5 - Formation of gate. 
+## 🔹 Step 5 – **Formation of the Gate**
 
-In this step, we have to do the process again, which is the photolithography process. And in fact, we have to do that process for every time. So now, here we use mask 4 on the left side, which is n-well. And for p-well, which is N-MOS, we are going to do the gate formation. And we are going to use boron, which is p-type impurity and with very low energy, which is 60 keV. Here we use low energy because we now want the doping very close to the surface. And we will maintain the dose of the boron in such a fashion that it will attain the required doping concentration. The doping concentration is dependent upon the Vth. And this is how we modify the doping concentration here and our threshold voltage comes under control. Same process will happen for P-MOS and here we use the mask 5. And our impurity will be either phosphorus or arsenic, which will be n-type impurity. We use energy as low as to maintain the arsenic doping impurity just to the surface level. And this will help us to control the threshold voltage for P-MOS as well.
+In this step, we perform the **photolithography process** once again, as it is required at every fabrication stage involving pattern transfer.
 
-Fixing the oxide - Now as we know the oxide is damaged due to all the process we have done, SO we have to strip the oxide using hydrofluoric acid (HF) and then we regrow the oxide of the same thickness on P-well and N-well. For gate creation we have to grow a 400nm polysilicon layer on the chip and the gate area is supposed to be low resistance so we dope it with more impurities of n-type material on the complete sheet of the polysilicon layer, which results in the low resistance gate. Then we again do the same process of photoresist layer and then we use mask 6 and remove unwanted part and then we remove mask 6 and we then do the etching process to remove the covered areathe gate area remains after that the photoresist layer is getting removed and we get the polysilicon gate layer of the both PMOS and NMOS.
+### Gate Formation in N-Well (for PMOS):
+
+* We use **Mask 4** for the N-well region.
+* A **boron implant (P-type impurity)** is used with **low energy (\~60 keV)** so that doping occurs **close to the surface**.
+* The **dose of boron** is carefully controlled to achieve the required **threshold voltage (V<sub>th</sub>)**.
+* This surface-level doping is known as **channel engineering** and ensures proper transistor behavior.
+
+### Gate Formation in P-Well (for NMOS):
+
+* We use **Mask 5** for the P-well region.
+* **Phosphorus or arsenic** (N-type impurities) are implanted using **low energy** to keep doping shallow.
+* This also helps in controlling the **V<sub>th</sub>** for NMOS.
+
+---
+
+### Fixing the Damaged Oxide:
+
+* Due to prior processing, the gate oxide might be damaged.
+* So, we **strip the damaged oxide** using **hydrofluoric acid (HF)**.
+* A **new gate oxide layer of same thickness** is regrown over both N-well and P-well.
+
+---
+
+### Polysilicon Deposition and Gate Etching:
+
+* A **400 nm thick polysilicon layer** is deposited over the wafer.
+* To reduce gate resistance, this polysilicon layer is **heavily doped with N-type impurities**.
+* Photolithography is repeated using **Mask 6** to define the gate shape.
+* After developing the photoresist, the **unwanted polysilicon is etched away**.
+* Finally, the remaining photoresist is removed, and **gate structures are formed** for both NMOS and PMOS.
 
 ![Alt text](images/S107.png)
 ![Alt text](images/S108.png)
@@ -1098,7 +1127,9 @@ Fixing the oxide - Now as we know the oxide is damaged due to all the process we
 ![Alt text](images/S115.png)
 ![Alt text](images/S116.png)
 
-### - Step 6 - Lightly doped drain (LDD) Formation
+## 🔹 Step 6 – **Lightly Doped Drain (LDD) Formation**
+
+We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel and hot electron effects.
 
 (P+)  (P-)  (N) - This is the doping profile we are trying to achieve.
 
@@ -1180,49 +1211,6 @@ These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, loc
 ![Alt text](images/S127.png)
 ![Alt text](images/S128.png)
 ![Alt text](images/S129.png)
-
-
-## 🔹 Step 5 – **Formation of the Gate**
-
-In this step, we perform the **photolithography process** once again, as it is required at every fabrication stage involving pattern transfer.
-
-### Gate Formation in N-Well (for PMOS):
-
-* We use **Mask 4** for the N-well region.
-* A **boron implant (P-type impurity)** is used with **low energy (\~60 keV)** so that doping occurs **close to the surface**.
-* The **dose of boron** is carefully controlled to achieve the required **threshold voltage (V<sub>th</sub>)**.
-* This surface-level doping is known as **channel engineering** and ensures proper transistor behavior.
-
-### Gate Formation in P-Well (for NMOS):
-
-* We use **Mask 5** for the P-well region.
-* **Phosphorus or arsenic** (N-type impurities) are implanted using **low energy** to keep doping shallow.
-* This also helps in controlling the **V<sub>th</sub>** for NMOS.
-
----
-
-### Fixing the Damaged Oxide:
-
-* Due to prior processing, the gate oxide might be damaged.
-* So, we **strip the damaged oxide** using **hydrofluoric acid (HF)**.
-* A **new gate oxide layer of same thickness** is regrown over both N-well and P-well.
-
----
-
-### Polysilicon Deposition and Gate Etching:
-
-* A **400 nm thick polysilicon layer** is deposited over the wafer.
-* To reduce gate resistance, this polysilicon layer is **heavily doped with N-type impurities**.
-* Photolithography is repeated using **Mask 6** to define the gate shape.
-* After developing the photoresist, the **unwanted polysilicon is etched away**.
-* Finally, the remaining photoresist is removed, and **gate structures are formed** for both NMOS and PMOS.
-
----
-
-## 🔹 Step 6 – **Lightly Doped Drain (LDD) Formation**
-
-We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel and hot electron effects.
-
 
 
 
