@@ -1076,10 +1076,154 @@ You can see the images below.
 ![Alt text](images/S103.png)
 ![Alt text](images/S104.png)
 ![Alt text](images/S105.png)
+
+- Here we are going to do the formation of gate. In this formation of gate, we have to decide our threshold voltage very carefully. And for that, we are going to carefully analyze the doping concentration (Na) and oxide capacitance (Cox). We have to maintain these two processes in such a fashion that we get our required voltage. Threshold voltage decides turn-on voltage for the gate and in return, it decides the working of our gate. 
+
 ![Alt text](images/S106.png)
+
+### - Step 5 - Formation of gate. 
+
+In this step, we have to do the process again, which is the photolithography process. And in fact, we have to do that process for every time. So now, here we use mask 4 on the left side, which is n-well. And for p-well, which is N-MOS, we are going to do the gate formation. And we are going to use boron, which is p-type impurity and with very low energy, which is 60 keV. Here we use low energy because we now want the doping very close to the surface. And we will maintain the dose of the boron in such a fashion that it will attain the required doping concentration. The doping concentration is dependent upon the Vth. And this is how we modify the doping concentration here and our threshold voltage comes under control. Same process will happen for P-MOS and here we use the mask 5. And our impurity will be either phosphorus or arsenic, which will be n-type impurity. We use energy as low as to maintain the arsenic doping impurity just to the surface level. And this will help us to control the threshold voltage for P-MOS as well.
+
+Fixing the oxide - Now as we know the oxide is damaged due to all the process we have done, SO we have to strip the oxide using hydrofluoric acid (HF) and then we regrow the oxide of the same thickness on P-well and N-well. For gate creation we have to grow a 400nm polysilicon layer on the chip and the gate area is supposed to be low resistance so we dope it with more impurities of n-type material on the complete sheet of the polysilicon layer, which results in the low resistance gate. Then we again do the same process of photoresist layer and then we use mask 6 and remove unwanted part and then we remove mask 6 and we then do the etching process to remove the covered areathe gate area remains after that the photoresist layer is getting removed and we get the polysilicon gate layer of the both PMOS and NMOS.
+
 ![Alt text](images/S107.png)
 ![Alt text](images/S108.png)
 ![Alt text](images/S109.png)
+![Alt text](images/S110.png)
+![Alt text](images/S111.png)
+![Alt text](images/S112.png)
+![Alt text](images/S113.png)
+![Alt text](images/S114.png)
+![Alt text](images/S115.png)
+![Alt text](images/S116.png)
+
+### - Step 6 - Lightly doped drain (LDD) Formation
+
+(P+)  (P-)  (N) - This is the doping profile we are trying to achieve.
+
+(P+) is our source and drain of PMOS, N is our N-well and (P-) is the LDD which is lightly doped drain formation we are trying to achieve.
+
+(N+) (N-) and (P) where (N+) is the source and drain (N-) is what we are trying to achieve which is lightly doped drain and then there is P which is P-well which we already have.
+
+#### Why LDD is used instead of P⁺/N⁺ directly:
+
+1. **Hot Electron Effect**:
+
+   * When device size shrinks but supply voltage remains constant, the **electric field increases** (E = V/d).
+   * This can generate **high-energy carriers** that break Si–Si bonds or even damage the thin gate oxide (\~3.2 eV barrier).
+   * Using **lightly doped N⁻ or P⁻** near the drain reduces the field intensity, thus minimizing this effect.
+
+2. **Short Channel Effect**:
+
+   * Smaller channel lengths make it difficult for the gate to control the current due to **drain field penetration**.
+   * LDD regions help control this by spreading the electric field and maintaining threshold voltage integrity.
+
+
+### LDD Formation Process:
+
+* The **dotted regions in the image** represent where the **LDD implants (N⁻ and P⁻)** will be made.
+
+#### For NMOS (in P-well):
+
+* Apply **Mask 7** on N-well to protect PMOS.
+* Perform **photolithography**, then implant **phosphorus (N-type, light dose)** to form N⁻ regions.
+
+#### For PMOS (in N-well):
+
+* Apply **Mask 8** to protect NMOS side.
+* Implant **boron (P-type, light dose)** into dotted areas to form P⁻ regions.
+
+These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, located just beside the gate on both sides.
+
+---
+
+### Spacer Formation (to protect LDD):
+
+* After LDD implantation, a **thick insulating layer** (usually **SiO₂ or Si₃N₄**) is deposited.
+* **Plasma anisotropic etching** (directional etching) is performed.
+
+  * It **removes material only in vertical direction**, leaving spacer material intact **near the gate sidewalls**.
+* These **spacers protect the shallow LDD regions** from being destroyed during the next heavy implantation step.
+
+---
+
+### Final Source and Drain Implantation:
+
+* After spacer formation:
+
+  * **Heavily doped N⁺** (for NMOS) and **P⁺** (for PMOS) source and drain regions are implanted.
+* These sit just **outside the spacers**, completing the **self-aligned LDD structure**.
+
+---
+
+### Summary of LDD Structure:
+
+* Final doping profile:
+
+  * **PMOS**: P⁺ | P⁻ | N-well | P⁻ | P⁺
+  * **NMOS**: N⁺ | N⁻ | P-well | N⁻ | N⁺
+* The **central gate** controls the channel, and the **LDD regions (P⁻/N⁻)** serve as buffers before the heavily doped source/drain.
+
+![Alt text](images/S117.png)
+![Alt text](images/S118.png)
+![Alt text](images/S119.png)
+![Alt text](images/S120.png)
+![Alt text](images/S121.png)
+
+
+![Alt text](images/S122.png)
+![Alt text](images/S123.png)
+![Alt text](images/S124.png)
+![Alt text](images/S125.png)
+![Alt text](images/S126.png)
+![Alt text](images/S127.png)
+![Alt text](images/S128.png)
+![Alt text](images/S129.png)
+
+
+## 🔹 Step 5 – **Formation of the Gate**
+
+In this step, we perform the **photolithography process** once again, as it is required at every fabrication stage involving pattern transfer.
+
+### Gate Formation in N-Well (for PMOS):
+
+* We use **Mask 4** for the N-well region.
+* A **boron implant (P-type impurity)** is used with **low energy (\~60 keV)** so that doping occurs **close to the surface**.
+* The **dose of boron** is carefully controlled to achieve the required **threshold voltage (V<sub>th</sub>)**.
+* This surface-level doping is known as **channel engineering** and ensures proper transistor behavior.
+
+### Gate Formation in P-Well (for NMOS):
+
+* We use **Mask 5** for the P-well region.
+* **Phosphorus or arsenic** (N-type impurities) are implanted using **low energy** to keep doping shallow.
+* This also helps in controlling the **V<sub>th</sub>** for NMOS.
+
+---
+
+### Fixing the Damaged Oxide:
+
+* Due to prior processing, the gate oxide might be damaged.
+* So, we **strip the damaged oxide** using **hydrofluoric acid (HF)**.
+* A **new gate oxide layer of same thickness** is regrown over both N-well and P-well.
+
+---
+
+### Polysilicon Deposition and Gate Etching:
+
+* A **400 nm thick polysilicon layer** is deposited over the wafer.
+* To reduce gate resistance, this polysilicon layer is **heavily doped with N-type impurities**.
+* Photolithography is repeated using **Mask 6** to define the gate shape.
+* After developing the photoresist, the **unwanted polysilicon is etched away**.
+* Finally, the remaining photoresist is removed, and **gate structures are formed** for both NMOS and PMOS.
+
+---
+
+## 🔹 Step 6 – **Lightly Doped Drain (LDD) Formation**
+
+We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel and hot electron effects.
+
+
 
 
 
