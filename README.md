@@ -1010,18 +1010,18 @@ To calculate the delay we just need to select the desired area on the waveform a
 ![Alt text](images/S90.png)
 ![Alt text](images/S91.png)
 
-<hr>
+---
 
-### 16 MASK CMOS Process
+## 16 MASK CMOS Process
 
-#### - Step 1 - What we have to do is select a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
+## 🔹 Step 1 - What we have to do is select a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
 
-#### - Step 2 - Creating active region for transistors. In that step 2, there are two steps.
+## 🔹 Step 2 - Creating active region for transistors. In that step 2, there are two steps.
 
 1) Creating isolation between p-substrate and active packets using 40nm silicon dioxide(SiO2) layer which acts as insulator. 
 2) We deposit 80nm layer of Si3N4 onto 40nm silicon dioxide.
 
-#### - Step 3 - Creating the Pockets
+## 🔹 Step 3 - Creating the Pockets
 
 1) Identify the region where to grow the pockets. So, first we have to grow the photoresist film of 1 micron onto the 80nm silicon nitrate(Si3N4)
 
@@ -1041,7 +1041,7 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 After that we strip out the silicon nitrate layer Si3N4 in the hot phosphoric acid and then we get our SiO2 isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
 
-#### - Step 4 - N-Well and P-Well
+## 🔹 Step 4 - N-Well and P-Well
 
 Now our oxidation process has been completed. So we have to create n-well and p-well. So the procedure for n-well and p-well is like this.  
 
@@ -1077,7 +1077,20 @@ You can see the images below.
 ![Alt text](images/S104.png)
 ![Alt text](images/S105.png)
 
-- Here we are going to do the formation of gate. In this formation of gate, we have to decide our threshold voltage very carefully. And for that, we are going to carefully analyze the doping concentration (Na) and oxide capacitance (Cox). We have to maintain these two processes in such a fashion that we get our required voltage. Threshold voltage decides turn-on voltage for the gate and in return, it decides the working of our gate. 
+---
+
+### 🔹 Threshold Voltage Adjustment
+
+To ensure that NMOS and PMOS devices switch at the desired voltage, we must adjust the threshold __voltage (Vth)__.
+
+This is done through threshold voltage implantation, also called Vth adjustment:
+
+  - For NMOS, we implant a small amount of Boron (p-type dopant) into the active region.
+
+  - For PMOS, we implant a small amount of Phosphorus or Arsenic (n-type dopant).
+
+The implant dose and energy are carefully controlled, usually using low-energy implantation so that the dopants stay close to the surface.
+
 
 ![Alt text](images/S106.png)
 
