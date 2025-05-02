@@ -1010,6 +1010,7 @@ To calculate the delay we just need to select the desired area on the waveform a
 ![Alt text](images/S90.png)
 ![Alt text](images/S91.png)
 
+<hr>
 
 ### 16 MASK CMOS Process
 
