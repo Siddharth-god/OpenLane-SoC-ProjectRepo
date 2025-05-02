@@ -947,9 +947,9 @@ Transition Fall Time  = Time(slew_high_fall_thr) - Time(slew_low_fall_thr)
 ## Day 3 - Design library cell using Magic Layout and ngspice characterization.
 
 <details>
-  <summary><h3>Theory - Click "Theory" to expand.<h3></summary>
+  <summary><h2>Theory - Click "Theory" to expand.<h2></summary>
 
-- VTC Spice simulation
+### - VTC Spice simulation
 
 1) Creating the spice deck
 - Component connectivity 
@@ -1018,12 +1018,12 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 ## 🔹 Step 2 - Creating active region for transistors. In that step 2, there are two steps.
 
-1) Creating isolation between p-substrate and active packets using 40nm silicon dioxide(SiO2) layer which acts as insulator. 
-2) We deposit 80nm layer of Si3N4 onto 40nm silicon dioxide.
+1) Creating isolation between p-substrate and active packets using 40nm silicon dioxide(SiO₂) layer which acts as insulator. 
+2) We deposit 80nm layer of Si₃N₄ onto 40nm silicon dioxide (SiO₂).
 
 ## 🔹 Step 3 - Creating the Pockets
 
-1) Identify the region where to grow the pockets. So, first we have to grow the photoresist film of 1 micron onto the 80nm silicon nitrate(Si3N4)
+1) Identify the region where to grow the pockets. So, first we have to grow the photoresist film of 1 micron onto the 80nm silicon nitrate(Si₃N₄)
 
 2) We have to use the mask as a protection layer from UV light. So there will be no reaction between the UV light and the photoresist layer. This mask protects the photoresist layer directly below the mask and the area which is not covered by the mask will react with UV light. 
 
@@ -1031,15 +1031,15 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 - After this process we wash out the unwanted area with some solution and what remains is the area protected by the mask. Then we remove the mask. Now this photoresist layer acts as a protective layer and when we do further process like etching the area under this photoresist layer does not get affected while the area which is not protected by this layer will be affected.
 
-- Now we do the etching process and the silicon nitrate(Si3N4) will get etched off from the not protected area. 
+- Now we do the etching process and the silicon nitrate(Si₃N₄) will get etched off from the not protected area. 
 
 - We now remove the photoresist layer chemically. 
 
-- Now once this process is completed we put the chip in oxidation furnace and the temperature of the furnace is around 900 to 1000 degree celsius which helps us grow the oxidation layer on our chip. Like we grown the SiO2 layer first we have to again grow the SiO2 layer but this time the area below the silicon nitrate is protected and it won't grow silicon dioxide there. 
+- Now once this process is completed we put the chip in oxidation furnace and the temperature of the furnace is around 900 to 1000 degree celsius which helps us grow the oxidation layer on our chip. Like we grown the SiO₂ layer first we have to again grow the SiO₂ layer but this time the area below the silicon nitrate is protected and it won't grow silicon dioxide there. 
 
 - __LOCOS__ and __Bird's beak__ : Now the silicon dioxide layer works as isolator or insulator and the two sections of the silicon nitrate layer are fully separated from each other and this process is called __LOCOS__ or __local oxidation of silicon__. And the dense area of silicon dioxide are called __Bird's beak__.
 
-After that we strip out the silicon nitrate layer Si3N4 in the hot phosphoric acid and then we get our SiO2 isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
+After that we strip out the silicon nitrate layer Si₃N₄ in the hot phosphoric acid and then we get our SiO₂ isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
 
 ## 🔹 Step 4 - N-Well and P-Well
 
@@ -1052,10 +1052,10 @@ Then we wash away the exposed or reacted area by some chemical. And we can now d
 We then remove the mask which we placed on the one side of the whole chip. And we try to create p-well on the right side or the exposed area using the __boron material__. 
 
   __Ion Implantation__ :
-  Boron is p-type material and it is diffused into the material using process called ion implantation. And it creates the p-well. Boron passes through the thick surface of the SiO2 to create p-well. It has the energy of 200 keV energy. And in this process boron does damage to the oxidation layer. So we have to again repair that layer as well. We will see that in the later process.
+  Boron is p-type material and it is diffused into the material using process called ion implantation. And it creates the p-well. Boron passes through the thick surface of the SiO₂ to create p-well. It has the energy of 200 keV energy. And in this process boron does damage to the oxidation layer. So we have to again repair that layer as well. We will see that in the later process.
 
 - N-Well :
-Now for the n-well we use the similar process. And we use mask 3 on the other side which we did not covered previously. And in this process for n-well creation we use the __phosphorus material__ which is heavier than the boron material. And it has the energy of 400 keV. And it penetrates through the SiO2 and creates n-well. 
+Now for the n-well we use the similar process. And we use mask 3 on the other side which we did not covered previously. And in this process for n-well creation we use the __phosphorus material__ which is heavier than the boron material. And it has the energy of 400 keV. And it penetrates through the SiO₂ and creates n-well. 
 
 - Deapth of Wells -
 Now the depth of the wells is not finalized yet. So we have to diffuse this wells to make them bigger for our PMOS and NMOS fabrication. Now, we put these chips into the drive-in furnace, which is a very high temperature furnace. And we put the chip for a long time there. It's about 1100 degrees Celsius for 4-6 hours. And it will create the welds big enough to fabricate our PMOS and NMOS onto them. And this process is called __Twin-TUBS__ process.
