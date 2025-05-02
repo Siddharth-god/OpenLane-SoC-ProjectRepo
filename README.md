@@ -1068,7 +1068,7 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 Now our oxidation process has been completed. So we have to create n-well and p-well. So the procedure for n-well and p-well is like this.  
 
-- P-Well :
+- __P-Well__ :
 To creatr P-well, We need to protect one area while we fabricate other.
 We again use photoresist layer on the whole chip. And we will use Mask 2 to protect the one side of area. After we done with mask, we again expose the photoresist area to the UV light. And the mask protects the one side while UV rays reacts with the exposed area. 
 
@@ -1085,7 +1085,7 @@ We then remove the mask which we placed on the one side of the whole chip. And w
 
 ![Alt text](images/S103.png)
 
-- N-Well :
+- __N-Well__ :
 Now for the n-well we use the similar process. And we use mask 3 on the other side which we did not covered previously. And in this process for n-well creation we use the __phosphorus material__ which is heavier than the boron material. And it has the energy of 400 keV. And it penetrates through the SiO₂ and creates n-well. 
 
 - Deapth of Wells -
@@ -1168,6 +1168,7 @@ In this step, we perform the **photolithography process** once again, as it is r
 
 ![Alt text](images/S116.png)
 
+
 ## 🔹 Step 6 – **Lightly Doped Drain (LDD) Formation**
 
 We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel and hot electron effects.
@@ -1177,6 +1178,8 @@ We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel an
 (P+) is our source and drain of PMOS, N is our N-well and (P-) is the LDD which is lightly doped drain formation we are trying to achieve.
 
 (N+) (N-) and (P) where (N+) is the source and drain (N-) is what we are trying to achieve which is lightly doped drain and then there is P which is P-well which we already have.
+
+![Alt text](images/S117.png)
 
 #### Why LDD is used instead of P⁺/N⁺ directly:
 
@@ -1201,10 +1204,16 @@ We now form the **Lightly Doped Drain (LDD)** regions to reduce short channel an
 * Apply **Mask 7** on N-well to protect PMOS.
 * Perform **photolithography**, then implant **phosphorus (N-type, light dose)** to form N⁻ regions.
 
+![Alt text](images/S118.png)
+
+![Alt text](images/S119.png)
+
 #### For PMOS (in N-well):
 
 * Apply **Mask 8** to protect NMOS side.
 * Implant **boron (P-type, light dose)** into dotted areas to form P⁻ regions.
+
+![Alt text](images/S120.png)
 
 These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, located just beside the gate on both sides.
 
@@ -1217,6 +1226,8 @@ These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, loc
 
   * It **removes material only in vertical direction**, leaving spacer material intact **near the gate sidewalls**.
 * These **spacers protect the shallow LDD regions** from being destroyed during the next heavy implantation step.
+
+![Alt text](images/S121.png)
 
 ---
 
@@ -1237,11 +1248,6 @@ These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, loc
   * **NMOS**: N⁺ | N⁻ | P-well | N⁻ | N⁺
 * The **central gate** controls the channel, and the **LDD regions (P⁻/N⁻)** serve as buffers before the heavily doped source/drain.
 
-![Alt text](images/S117.png)
-![Alt text](images/S118.png)
-![Alt text](images/S119.png)
-![Alt text](images/S120.png)
-![Alt text](images/S121.png)
 
 
 ![Alt text](images/S122.png)
