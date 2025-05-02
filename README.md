@@ -1014,9 +1014,13 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 ## 16 MASK CMOS Process
 
-## 🔹 Step 1 - What we have to do is select a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
+## 🔹 Step 1 - Selectiong the Substrate
+- What we have to do is select a substrate which we normally do p-type or n-type silicon substrate. We keep the doping level less than the well doping. 
 
-## 🔹 Step 2 - Creating active region for transistors. In that step 2, there are two steps.
+![Alt text](images/S92.png)
+
+
+## 🔹 Step 2 - Creating active region for transistors.
 
 1) Creating isolation between p-substrate and active packets using 40nm silicon dioxide(SiO₂) layer which acts as insulator. 
 2) We deposit 80nm layer of Si₃N₄ onto 40nm silicon dioxide (SiO₂).
@@ -1027,19 +1031,38 @@ To calculate the delay we just need to select the desired area on the waveform a
 
 2) We have to use the mask as a protection layer from UV light. So there will be no reaction between the UV light and the photoresist layer. This mask protects the photoresist layer directly below the mask and the area which is not covered by the mask will react with UV light. 
 
+![Alt text](images/S93.png)
+
 - Now, After that we have protected the area by mask which we wanted for our n-well and p-well creation. These wells are exactly below the area of the mask layer. This process of protecting the photoresist from UV light is called __Photolithography__. 
 
-- After this process we wash out the unwanted area with some solution and what remains is the area protected by the mask. Then we remove the mask. Now this photoresist layer acts as a protective layer and when we do further process like etching the area under this photoresist layer does not get affected while the area which is not protected by this layer will be affected.
+- After this process we wash out the unwanted area with some solution and what remains is the area protected by the mask. 
+- Then we remove the mask. 
+- The photoresist layer acts as a protective layer and when we do further process like etching the area under this photoresist layer does not get affected while the area which is not protected by this layer will be affected.
+
+![Alt text](images/S94.png)
+
+![Alt text](images/S95.png)
 
 - Now we do the etching process and the silicon nitrate(Si₃N₄) will get etched off from the not protected area. 
 
+![Alt text](images/S96.png)
+
 - We now remove the photoresist layer chemically. 
+
+![Alt text](images/S97.png)
 
 - Now once this process is completed we put the chip in oxidation furnace and the temperature of the furnace is around 900 to 1000 degree celsius which helps us grow the oxidation layer on our chip. Like we grown the SiO₂ layer first we have to again grow the SiO₂ layer but this time the area below the silicon nitrate is protected and it won't grow silicon dioxide there. 
 
 - __LOCOS__ and __Bird's beak__ : Now the silicon dioxide layer works as isolator or insulator and the two sections of the silicon nitrate layer are fully separated from each other and this process is called __LOCOS__ or __local oxidation of silicon__. And the dense area of silicon dioxide are called __Bird's beak__.
 
-After that we strip out the silicon nitrate layer Si₃N₄ in the hot phosphoric acid and then we get our SiO₂ isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
+![Alt text](images/S98.png)
+
+![Alt text](images/S99.png)
+
+- After that we strip out the silicon nitrate layer Si₃N₄ in the hot phosphoric acid and then we get our SiO₂ isolation layer between two transistors so the transistor won't be able to communicate with each other. The narrow area or the area which is not the bird's beak is the active region where we use our transistors and the wide area acts as a isolation area between them.
+
+![Alt text](images/S100.png)
+
 
 ## 🔹 Step 4 - N-Well and P-Well
 
@@ -1047,12 +1070,20 @@ Now our oxidation process has been completed. So we have to create n-well and p-
 
 - P-Well :
 To creatr P-well, We need to protect one area while we fabricate other.
-We again use photoresist layer on the whole chip. And we will use mask 2 to protect the one side of area. After we done with mask, we again expose the photoresist area to the UV light. And the mask protects the one side while UV rays reacts with the exposed area. 
+We again use photoresist layer on the whole chip. And we will use Mask 2 to protect the one side of area. After we done with mask, we again expose the photoresist area to the UV light. And the mask protects the one side while UV rays reacts with the exposed area. 
+
+- Mask 2 -
+![Alt text](images/S101.png)
+
+![Alt text](images/S102.png)
+
 Then we wash away the exposed or reacted area by some chemical. And we can now do the further process. 
 We then remove the mask which we placed on the one side of the whole chip. And we try to create p-well on the right side or the exposed area using the __boron material__. 
 
   __Ion Implantation__ :
   Boron is p-type material and it is diffused into the material using process called ion implantation. And it creates the p-well. Boron passes through the thick surface of the SiO₂ to create p-well. It has the energy of 200 keV energy. And in this process boron does damage to the oxidation layer. So we have to again repair that layer as well. We will see that in the later process.
+
+![Alt text](images/S103.png)
 
 - N-Well :
 Now for the n-well we use the similar process. And we use mask 3 on the other side which we did not covered previously. And in this process for n-well creation we use the __phosphorus material__ which is heavier than the boron material. And it has the energy of 400 keV. And it penetrates through the SiO₂ and creates n-well. 
@@ -1060,21 +1091,8 @@ Now for the n-well we use the similar process. And we use mask 3 on the other si
 - Deapth of Wells -
 Now the depth of the wells is not finalized yet. So we have to diffuse this wells to make them bigger for our PMOS and NMOS fabrication. Now, we put these chips into the drive-in furnace, which is a very high temperature furnace. And we put the chip for a long time there. It's about 1100 degrees Celsius for 4-6 hours. And it will create the welds big enough to fabricate our PMOS and NMOS onto them. And this process is called __Twin-TUBS__ process.
 
-You can see the images below.
-
-![Alt text](images/S92.png)
-![Alt text](images/S93.png)
-![Alt text](images/S94.png)
-![Alt text](images/S95.png)
-![Alt text](images/S96.png)
-![Alt text](images/S97.png)
-![Alt text](images/S98.png)
-![Alt text](images/S99.png)
-![Alt text](images/S100.png)
-![Alt text](images/S101.png)
-![Alt text](images/S102.png)
-![Alt text](images/S103.png)
 ![Alt text](images/S104.png)
+
 ![Alt text](images/S105.png)
 
 ---
@@ -1098,18 +1116,27 @@ The implant dose and energy are carefully controlled, usually using low-energy i
 
 In this step, we perform the **photolithography process** once again, as it is required at every fabrication stage involving pattern transfer.
 
-### Gate Formation in N-Well (for PMOS):
+### Gate Formation in P-Well (for NMOS):
 
 * We use **Mask 4** for the N-well region.
 * A **boron implant (P-type impurity)** is used with **low energy (\~60 keV)** so that doping occurs **close to the surface**.
 * The **dose of boron** is carefully controlled to achieve the required **threshold voltage (V<sub>th</sub>)**.
 * This surface-level doping is known as **channel engineering** and ensures proper transistor behavior.
 
-### Gate Formation in P-Well (for NMOS):
+![Alt text](images/S107.png)
+
+![Alt text](images/S108.png)
+
+
+### Gate Formation in N-Well (for PMOS):
 
 * We use **Mask 5** for the P-well region.
 * **Phosphorus or arsenic** (N-type impurities) are implanted using **low energy** to keep doping shallow.
 * This also helps in controlling the **V<sub>th</sub>** for NMOS.
+
+![Alt text](images/S109.png)
+
+![Alt text](images/S110.png)
 
 ---
 
@@ -1118,6 +1145,12 @@ In this step, we perform the **photolithography process** once again, as it is r
 * Due to prior processing, the gate oxide might be damaged.
 * So, we **strip the damaged oxide** using **hydrofluoric acid (HF)**.
 * A **new gate oxide layer of same thickness** is regrown over both N-well and P-well.
+
+![Alt text](images/S111.png)
+
+![Alt text](images/S112.png)
+
+![Alt text](images/S113.png)
 
 ---
 
@@ -1129,15 +1162,10 @@ In this step, we perform the **photolithography process** once again, as it is r
 * After developing the photoresist, the **unwanted polysilicon is etched away**.
 * Finally, the remaining photoresist is removed, and **gate structures are formed** for both NMOS and PMOS.
 
-![Alt text](images/S107.png)
-![Alt text](images/S108.png)
-![Alt text](images/S109.png)
-![Alt text](images/S110.png)
-![Alt text](images/S111.png)
-![Alt text](images/S112.png)
-![Alt text](images/S113.png)
 ![Alt text](images/S114.png)
+
 ![Alt text](images/S115.png)
+
 ![Alt text](images/S116.png)
 
 ## 🔹 Step 6 – **Lightly Doped Drain (LDD) Formation**
