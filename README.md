@@ -1614,11 +1614,33 @@ magic -T sky130A.tech sky130_inv.mag &
 #### 2. Load the custom inverter layout in magic and explore.
 
 Screenshot of custom inverter layout in magic
+
 ![Alt text](linux_images/inverter.png)
 
+NMOS and PMOS identified
 
+![Alt text](linux_images/nmos_part.png)
 
+![Alt text](linux_images/pmos_part.png)
 
+Output Y connectivity to PMOS and NMOS drain verified
+
+![Alt text](linux_images/drain_region.png)
+
+PMOS source connectivity to VDD (here VPWR) verified
+
+![Alt text](linux_images/source_vdd.png)
+
+NMOS source connectivity to VSS (here VGND) verified
+
+![Alt text](linux_images/source_gnd.png)
+
+If we delete the specific part from the layout then we will get the DRC error 
+- We want DRC = 0 for clean layout without errors 
+Therefore, if we delete any part then we have to add that part again to tackle the error.
+The error will be written in the tkcon window and if we click on the drc tab then it'll zoom on the error.
+
+![Alt text](linux_images/error_drc.png)
 
 
 
