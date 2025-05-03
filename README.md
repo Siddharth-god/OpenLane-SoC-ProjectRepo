@@ -1252,13 +1252,11 @@ Great! Here's your explanation of **Step 6: Source and Drain Formation**, format
 
 ---
 
-## **Step 7: Source and Drain Formation**
+## 🔹Step 7: Source and Drain Formation
 
-### **Purpose:**
+### Purpose:
 
-To form the **heavily doped regions** (N+ and P+) that act as the **source and drain** of NMOS and PMOS transistors.
-
----
+To form the __heavily doped regions__ (N+ and P+) that act as the **source and drain** of NMOS and PMOS transistors.
 
 ### **Screen Oxide Deposition**
 
@@ -1270,8 +1268,6 @@ To form the **heavily doped regions** (N+ and P+) that act as the **source and d
 * This oxide layer is grown **on top of the silicon dioxide layer** and also **on top of the polysilicon gate**.
 
 ![Alt text](images/S122.png)
-
----
 
 ### **NMOS (N+ Implantation)**
 
@@ -1334,7 +1330,7 @@ In image look the region of P-Well you can see the extra built region that is N+
 
   * **N+ regions** form deep and well-defined **source and drain** for **NMOS**.
   * **P+ regions** form deep and reliable **source and drain** for **PMOS**.
-  
+
 ![Alt text](images/S127.png)
 
 ---
