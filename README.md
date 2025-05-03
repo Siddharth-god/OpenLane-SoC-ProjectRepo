@@ -1642,6 +1642,39 @@ The error will be written in the tkcon window and if we click on the drc tab the
 
 ![Alt text](linux_images/error_drc.png)
 
+#### 3. Spice extraction of inverter in magic.
+
+Commands for spice extraction of the custom inverter layout to be used in tkcon window of magic
+```bash
+# Check current directory
+pwd
+
+# Extraction command to extract to .ext format
+extract all
+
+# Before converting ext to spice this command enable the parasitic extraction also
+ext2spice cthresh 0 rthresh 0
+
+# Converting to ext to spice
+ext2spice
+```
+Extracting the file into our vsd folder
+
+![Alt text](linux_images/extract_file.png)
+
+File has been extracted into our folder
+
+![Alt text](linux_images/extracted_file.png)
+
+- We will create spice file using ext file which will be used in our ngspice tool
+
+![Alt text](linux_images/ext2spice.png)
+![Alt text](linux_images/spicefile.png)
+![Alt text](linux_images/content_of_spice.png)
+
+#### 4. Editing the spice model file for analysis through simulation.
+
+Measuring unit distance in layout grid
 
 
 
