@@ -1344,8 +1344,85 @@ These are essential for completing the active regions of both transistors.
 
 ---
 
+## Step : Formation of Contacts and Interconnect Locals
+
+### Purpose:
+
+To create electrical **contacts** to the **source (S), drain (D), and gate (GND)** terminals of both NMOS and PMOS. These contacts are **the only accessible points** for external circuits to communicate with the transistors.
+
+#### 1) Removing the Screen Oxide :
+
+* First, we **remove the thin screen oxide** layer (used in the previous step to prevent channeling).
+* This is done using a **hydrofluoric acid (HF) solution**, which etches away the oxide.
+* We remove this screen oxide **completely from all areas** where it was deposited — including above the **source, drain, and gate**.
+* Now the **source, drain, and gate contacts are exposed** and ready for further processing.
+
 ![Alt text](images/S129.png)
 
+#### 2) Titanium Deposition (Local Interconnect Formation) :
+
+* We now deposit **titanium (Ti)** over the wafer surface.
+* This is done using the **sputtering process**, which works as follows:
+
+  * Titanium metal is bombarded with **argon gas (Ar)** ions.
+  * The titanium atoms get **ejected and deposited** uniformly over the wafer surface.
+* Titanium is chosen because it has **low resistivity**, which helps reduce contact resistance.
+
+![Alt text](images/S130.png)
+
+![Alt text](images/S131.png)
+
+
+#### 3) Silicidation Process (Forming Contact Material):
+
+* Next, we **heat the wafer** to around **650–700°C** in a **nitrogen (N₂) ambient** for about **60 seconds**.
+* Two chemical reactions occur:
+
+  1. **Titanium + Silicon** (at source/drain/gate) → **Titanium Silicide (TiSi₂)**
+
+     * This forms a **low-resistance contact** at S, D, and G.
+  2. Titanium also reacts with surrounding nitrogen to form **Titanium Nitride (TiN)**.
+
+     * TiN is used only for **local interconnections** within the chip.
+
+![Alt text](images/S132.png)
+
+![Alt text](images/S133.png)
+
+
+#### 4) Contact Patterning with Mask 11 :
+
+* We now define the actual contact areas using **photolithography**:
+
+  * Apply photoresist and expose it using **Mask 11**, which defines where contacts should remain.
+  * Develop and etch the wafer.
+* We remove the unwanted **Titanium Nitride (TiN)** from exposed areas using an **RCA cleaning process**.
+
+![Alt text](images/S134.png)
+
+![Alt text](images/S135.png)
+
+![Alt text](images/S136.png)
+
+![Alt text](images/S137.png)
+
+---
+
+#### Final Result:
+
+* Only the required **TiSi₂ contacts** remain at the source, drain, and gate terminals.
+* These contacts:
+
+  * Provide **electrical connectivity** to external circuits.
+  * Enable **communication** between internal devices and the chip's outer world.
+  * Serve as the foundation for **metal interconnects** in the next step.
+
+![Alt text](images/S138.png)
+
+![Alt text](images/S139.png)
+
+
+---
 
 
 
