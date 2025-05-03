@@ -1635,7 +1635,7 @@ NMOS source connectivity to VSS (here VGND) verified
 
 ![Alt text](linux_images/source_gnd.png)
 
-If we delete the specific part from the layout then we will get the DRC error 
+// If we delete the specific part from the layout then we will get the DRC error 
 - We want DRC = 0 for clean layout without errors 
 Therefore, if we delete any part then we have to add that part again to tackle the error.
 The error will be written in the tkcon window and if we click on the drc tab then it'll zoom on the error.
