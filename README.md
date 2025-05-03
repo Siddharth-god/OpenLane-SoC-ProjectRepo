@@ -1248,15 +1248,106 @@ These **N⁻ and P⁻ regions** are now the **Lightly Doped Drain regions**, loc
   * **NMOS**: N⁺ | N⁻ | P-well | N⁻ | N⁺
 * The **central gate** controls the channel, and the **LDD regions (P⁻/N⁻)** serve as buffers before the heavily doped source/drain.
 
+Great! Here's your explanation of **Step 6: Source and Drain Formation**, formatted with `__` for bold emphasis, and clearly structured for clarity and understanding:
 
+---
+
+## **Step 7: Source and Drain Formation**
+
+### **Purpose:**
+
+To form the **heavily doped regions** (N+ and P+) that act as the **source and drain** of NMOS and PMOS transistors.
+
+---
+
+### **Screen Oxide Deposition**
+
+* Before implantation, we grow a very thin layer of **screen oxide** (a few nm thick).
+* This is done to:
+
+  * **Prevent channeling** of implanted ions deep into the substrate.
+  * Help **control dopant distribution** near the surface.
+* This oxide layer is grown **on top of the silicon dioxide layer** and also **on top of the polysilicon gate**.
 
 ![Alt text](images/S122.png)
+
+---
+
+### **NMOS (N+ Implantation)**
+
+1. We begin by defining which side of the chip we want to do the N+ implantation on.
+
+2. Apply a **photoresist layer** and expose it using **Mask 9**, which **covers the left side** of the wafer.
+
+3. We perform standard photolithography:
+
+   * **Expose** the right side.
+   * **Develop** the photoresist.
+   * **Etch away** the oxide and remove the resist where needed.
+
+4. Now the **right side is open** for implantation, and the **left side is protected** and we remove the MASK 9.
+
 ![Alt text](images/S123.png)
+
+5. We implant **Arsenic (As)** at **75 keV** into the exposed region.
+
 ![Alt text](images/S124.png)
+
+6. The **sidewall spacers** already present beside the gate protect the **LDD regions**, so the **N+ implant** occurs only in the **exposed source/drain areas**.
+
+7. This creates the **N+ source and drain** regions for the **NMOS** transistor.
+
+In image look the region of P-Well you can see the extra built region that is N+ Implant
+
 ![Alt text](images/S125.png)
-![Alt text](images/S126.png)
-![Alt text](images/S127.png)
+
+---
+
+### **PMOS (P+ Implantation)**
+
+1. We repeat the same process, this time for the **PMOS** device on the **other side** of the chip.
+
+2. Apply photoresist again and use **Mask 10** to **cover the right side**.
+
+3. Now the **left side is exposed** and we implant **Boron (B)** at **50 keV**.
+
+4. Again, the **sidewall spacers** protect the LDD areas.
+
+5. This results in **P+ source and drain** regions for the **PMOS** transistor.
+
 ![Alt text](images/S128.png)
+
+---
+
+### **Annealing / Drive-In Diffusion**
+
+* After both N+ and P+ implants, the wafer is placed in a **high-temperature furnace** at about **1000°C**.
+
+* This step is called **annealing** or **drive-in diffusion**, and it serves two purposes:
+
+  * **Repair damage** caused by ion implantation.
+  * **Push the dopants deeper** into the substrate to form proper junctions.
+
+![Alt text](images/S126.png)
+
+* The result:
+
+  * **N+ regions** form deep and well-defined **source and drain** for **NMOS**.
+  * **P+ regions** form deep and reliable **source and drain** for **PMOS**.
+  
+![Alt text](images/S127.png)
+
+---
+
+At the end of this step, we now have:
+
+* **N+ source and drain** for NMOS (in the P-substrate).
+* **P+ source and drain** for PMOS (in the N-well).
+
+These are essential for completing the active regions of both transistors.
+
+---
+
 ![Alt text](images/S129.png)
 
 
