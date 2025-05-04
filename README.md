@@ -1565,9 +1565,6 @@ We follow the **same steps again** to build more layers:
 
 ---
 
-
-
-
 </details>
 
 ## Implementation
@@ -1798,3 +1795,96 @@ gvim .magicrc
 # Command to open magic tool in better graphics
 magic -d XR &
 ```
+![Alt text](linux_images/2.png)
+
+Screenshot of .magicrc file
+![Alt text](linux_images/3.png)
+![Alt text](linux_images/4.png)
+
+
+#### Incorrectly implemented poly.9 simple rule correction
+
+Screenshot of poly rules
+![Alt text](linux_images/polyrules.png)
+
+Incorrectly implemented poly.9 rule no drc violation even though spacing < 0.48u
+
+![Alt text](linux_images/18.png)
+![Alt text](linux_images/19.png)
+
+New commands inserted in sky130A.tech file to update drc
+
+![Alt text](linux_images/11.png)
+![Alt text](linux_images/13.png)
+![Alt text](linux_images/14.png)
+
+Commands to run on tkcon window
+```bash
+# Loading updated tech file
+tech load sky130A.tech
+
+# Must re-run drc check to see updated drc errors
+drc check
+
+# Selecting region displaying the new errors and getting the error messages 
+drc why
+```
+Screenshot of magic window with rule implemented
+![Alt text](linux_images/updated_poly.png)
+![Alt text](linux_images/updated_poly2.png)
+
+#### Incorrectly implemented nwell.4 complex rule correction
+
+Screenshot of nwell rules
+![Alt text](linux_images/nwell_rules.png)
+
+Incorrectly implemented nwell.4 rule no drc violation even though no tap present in nwell
+![Alt text](linux_images/nwell_design.png)
+
+New commands inserted in sky130A.tech file to update drc
+
+![Alt text](linux_images/15.png)
+![Alt text](linux_images/16.png)
+
+Commands to run in tkcon window
+```bash
+# Loading updated tech file
+tech load sky130A.tech
+
+# Change drc style to drc full
+drc style drc(full)
+
+# Must re-run drc check to see updated drc errors
+drc check
+
+# Selecting region displaying the new errors and getting the error messages 
+drc why
+```
+
+Screenshot of magic window with rule implemented
+
+![Alt text](linux_images/17.png)
+
+---
+
+## Day 4 - Pre-layout timing analysis and importance of good clock tree
+
+Theory
+
+## Implementation
+
+#### Day 4 Objectives :
+
+1) Fix up small DRC errors and verify the design is ready to be inserted into our flow.
+2) Save the finalized layout with custom name and open it.
+3) Generate lef from the layout.
+4) Copy the newly generated lef and associated required lib files to 'picorv32a' design 'src' directory.
+5) Edit 'config.tcl' to change lib file and add the new extra lef into the openlane flow.
+6) Run openlane flow synthesis with newly inserted custom inverter cell.
+7) Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
+8) Once synthesis has accepted our custom inverter we can now run floorplan and placement and verify the cell is accepted in PnR flow.
+9) Do Post-Synthesis timing analysis with OpenSTA tool.
+10) Make timing ECO fixes to remove all violations.
+11) Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+12) Post-CTS OpenROAD timing analysis.
+13) Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
