@@ -1798,6 +1798,7 @@ magic -d XR &
 ![Alt text](linux_images/2.png)
 
 Screenshot of .magicrc file
+
 ![Alt text](linux_images/3.png)
 ![Alt text](linux_images/4.png)
 
@@ -1805,6 +1806,7 @@ Screenshot of .magicrc file
 #### Incorrectly implemented poly.9 simple rule correction
 
 Screenshot of poly rules
+
 ![Alt text](linux_images/polyrules.png)
 
 Incorrectly implemented poly.9 rule no drc violation even though spacing < 0.48u
@@ -1830,6 +1832,7 @@ drc check
 drc why
 ```
 Screenshot of magic window with rule implemented
+
 ![Alt text](linux_images/updated_poly.png)
 ![Alt text](linux_images/updated_poly2.png)
 
@@ -1839,6 +1842,7 @@ Screenshot of nwell rules
 ![Alt text](linux_images/nwell_rules.png)
 
 Incorrectly implemented nwell.4 rule no drc violation even though no tap present in nwell
+
 ![Alt text](linux_images/nwell_design.png)
 
 New commands inserted in sky130A.tech file to update drc
