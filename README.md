@@ -1676,12 +1676,125 @@ File has been extracted into our folder
 
 Measuring unit distance in layout grid
 
+![Alt text](linux_images/grid_units.png)
 
+Final edited NETLIST file ready for ngspice simulation
 
+![Alt text](linux_images/netlist.png)
 
+#### 5. Post-layout ngspice simulations.
 
+Commands for ngspice simulation
 
+```bash
+#Install ngspice
+sudo apt install ngspice
 
+# Command to directly load spice file for simulation to ngspice
+ngspice sky130_inv.spice
 
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
+```
+Ngspice install 
+![Alt text](linux_images/ngspice.png)
 
+Screenshots of ngspice run
+![Alt text](linux_images/ngspicerun.png)
 
+Screenshot of generated plot
+![Alt text](linux_images/waveform.png)
+![Alt text](linux_images/waveform2.png)
+
+```
+Rise time calculation :
+
+Rise time calculation = Time taken for o/p to rise 80% - Time taken for o/p to rise 20%
+20% of output value = 0.660 V
+80% of output value = 2.64 V
+```
+20% RISE -
+![Alt text](linux_images/rise20w.png)
+![Alt text](linux_images/rise20.png)
+
+80% RISE -
+![Alt text](linux_images/rise80w.png)
+![Alt text](linux_images/rise80.png)
+
+```
+Rise transition time = 2.24638 - 2.18242 = 0.06396ns = 63.96ps
+```
+```
+Fall time calculation :
+
+Fall transition time = Time taken for o/p to fall 20% - Time taken for o/p to fall 80%
+20% of output value = 0.660 V
+80% of output value = 2.64 V
+```
+20% FALL -
+![Alt text](linux_images/fall20w.png)
+![Alt text](linux_images/fall20.png)
+
+80% FALL -
+![Alt text](linux_images/fall80w.png)
+![Alt text](linux_images/fall80.png)
+
+```
+Fall transition time = 4.0955 - 4.0536 = 0.0419 = 41.9
+```
+```
+Rise Delay calculation :
+
+Rise cell delay = Time taken for o/p to rise 50% - Time taken for i/p to fall to 50%
+
+50% of 3.3 V = 1.65 V
+```
+50% RISE -
+![Alt text](linux_images/risedelayw.png)
+![Alt text](linux_images/risedelay.png)
+
+```
+Rise cell delay = 2.21144 - 2.15008 = 0.06136 = 61.36
+```
+```
+Fall Delay calculation :
+
+Fall cell dealy = Time taken for o/p to fall 50% - Time taken for i/p to rise to 50%
+
+50% of 3.3 V = 1.65 V
+```
+50% FALL -
+![Alt text](linux_images/falldelayw.png)
+![Alt text](linux_images/falldelay.png)
+
+```
+Fall cell delay = 4.07 - 4.05 = 0.02 = 20ps
+```
+
+#### 6. Find problem in the DRC section of the old magic tech file for the skywater process and fix them.
+Link to Sky130 Periphery rules: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+
+Commands to download and view the corrupted skywater process magic tech file and associated files to perform drc corrections
+
+```bash
+# Change to home directory
+cd
+
+# Command to download the lab files
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
+# Since lab file is compressed command to extract it
+tar xfz drc_tests.tgz
+
+# Change directory into the lab folder
+cd drc_tests
+
+# List all files and directories present in the current directory
+ls -al
+
+# Command to view .magicrc file
+gvim .magicrc
+
+# Command to open magic tool in better graphics
+magic -d XR &
+```
