@@ -2479,9 +2479,14 @@ unset ::env(LIB_CTS)
 # With placement done we are now ready to run CTS
 run_cts
 ```
+- running floorplan
 
 ![Alt text](linux_images/floorplandone.png)
+
+- running cts
+
 ![Alt text](linux_images/ctsdone.png)
+
 ![Alt text](linux_images/ctsfile.png)
 
 ### 12. Post-CTS OpenROAD timing analysis.
