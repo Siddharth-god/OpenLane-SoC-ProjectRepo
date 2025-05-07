@@ -2282,6 +2282,142 @@ echo $::env(SYNTH_DRIVING_CELL)
 run_synthesis
 ```
 
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
+![Alt text](linux_images/synthesis2.png)
+
+Commands to run STA in another terminal
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+
+Screenshots of commands run
+
+![Alt text](linux_images/pre_std_config.png)
+![Alt text](linux_images/max_config.png)
+![Alt text](linux_images/updatedop.png)
+
+### 10. Make timing ECO fixes to remove all violations.
+
+- OR gate of drive strength 2 is driving 4 fanouts
+
+![Alt text](linux_images/11672.png)
+
+- Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+```bash
+# Reports all the connections to a net
+report_net -connections _11672_
+
+# Checking command syntax
+help replace_cell
+
+# Replacing cell
+replace_cell _14510_ sky130_fd_sc_hd__or3_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+- Result - slack reduced
+
+![Alt text](linux_images/slack.png)
+![Alt text](linux_images/slack2.png)
+![Alt text](linux_images/slack3.png)
+![Alt text](linux_images/slack4.png)
+
+- OR gate of drive strength 2 is driving 4 fanouts
+
+![Alt text](linux_images/slack7.png)
+
+- Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+
+![Alt text](linux_images/slack5.png)
+![Alt text](linux_images/slack6.png)
+
+- OR gate of drive strength 2 driving OA gate has more delay
+
+![Alt text](linux_images/delay.png)
+
+- Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+```bash
+# Reports all the connections to a net
+report_net -connections _11643_
+
+# Replacing cell
+replace_cell _14481_ sky130_fd_sc_hd__or4_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+- Result - slack reduced
+
+![Alt text](linux_images/delay2.png)
+![Alt text](linux_images/delay3.png)
+
+- OR gate of drive strength 2 driving OA gate has more delay - another gate
+
+![Alt text](linux_images/delay4.png)
+
+- Commands to perform analysis and optimize timing by replacing with OR gate of drive strength 4
+```bash
+# Reports all the connections to a net
+report_net -connections _11668_
+
+# Replacing cell
+replace_cell _14506_ sky130_fd_sc_hd__or4_4
+
+# Generating custom timing report
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+Result - slack reduced
+
+![Alt text](linux_images/delay5.png)
+![Alt text](linux_images/delay6.png)
+
+- Commands to verify instance ```14506``` is replaced with ```sky130_fd_sc_hd__or4_4```
+
+```bash
+# Generating custom timing report
+report_checks -from _29043_ -to _30440_ -through _14506_
+```
+Screenshot of replaced instance
+
+![Alt text](linux_images/check.png)
+
+_We started ECO fixes at wns -23.9000 and now we stand at wns -22.6173 we reduced around 1.2827 ns of violation_ __So this is how we remove the violation we have to take it to zero or in positive side the process gets bigger so i just showed how it's done__.
+
+### 11. Replace the old netlist with the new netlist generated after timing ECO fix and implement the floorplan, placement and cts.
+
+Now to insert this updated netlist to PnR flow and we can use write_verilog and overwrite the synthesis netlist but before that we are going to make a copy of the old old netlist
+
+Commands to make copy of netlist
+```bash
+# Change from home directory to synthesis results directory
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/
+
+# List contents of the directory
+ls
+
+# Copy and rename the netlist
+cp picorv32a.synthesis.v picorv32a.synthesis_old.v
+
+# List contents of the directory
+ls
+```
+Screenshot of commands run
+
+![Alt text](linux_images/copysynthesis.png)
+
+- Commands to write verilog
+```bash
+# Check syntax
+help write_verilog
+
+# Overwriting current synthesis netlist
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/25-03_18-52/results/synthesis/picorv32a.synthesis.v
+
+# Exit from OpenSTA since timing analysis is done
+exit
+```
 
