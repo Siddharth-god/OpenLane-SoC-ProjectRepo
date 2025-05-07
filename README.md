@@ -1935,7 +1935,6 @@ help grid
 # Set grid values accordingly
 grid 0.46um 0.34um 0.23um 0.17um
 ```
-![Alt text](linux_images/withoutgrid.png)
 ![Alt text](linux_images/commandforgrid.png)
 ![Alt text](linux_images/withgrid.png)
 
@@ -2040,7 +2039,12 @@ set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc
 
 set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
 ```
+Before 
+
 ![Alt text](linux_images/before.png)
+
+After 
+
 ![Alt text](linux_images/after.png)
 
 
@@ -2079,6 +2083,7 @@ run_synthesis
 ### 7. Remove/reduce the newly introduced violations with the introduction of custom inverter cell by modifying design parameters.
 
 Noting down current design values generated before modifying parameters to improve timing
+
 ![Alt text](linux_images/negop2.png)
 ![Alt text](linux_images/negop.png)
 
@@ -2212,13 +2217,71 @@ set ::env(SYNTH_SIZING) 1
 # Now that the design is prepped and ready, we can run synthesis using following command
 run_synthesis
 ```
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
-![Alt text](linux_images/after.png)
+![Alt text](linux_images/synthesis.png)
+
+Newly created ```pre_sta.conf``` for STA analysis in ```openlane``` directory.
+- We have to create this files by ourselves these are not already present. 
+- You can use this command to start creating this file
+
+```bash
+# Creating the new file in linux in _openlane_ folder
+vim pre_sta.conf 
+# Or    
+nano pre_sta.conf
+```
+![Alt text](linux_images/pre_sta.conf.png)
+
+Newly created ```my_base.sdc``` for STA analysis in ```openlane/designs/picorv32a/src``` directory based on the file ```openlane/scripts/base.sdc```
+- Again we do the same process and create new file make sure everything you write is perfect or you will get so many errors.
+```bash
+# Creating the new file in linux in _openlane_ folder
+vim my_base.sdc 
+# Or    
+nano my_base.sdc
+```
+![Alt text](linux_images/my_base.sdc.png)
+
+Commands to run STA in another linux terminal
+
+```bash
+# Change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+# Command to invoke OpenSTA tool with script
+sta pre_sta.conf
+```
+Screenshots of the commands run
+
+![Alt text](linux_images/pre_sta_run.png)
+![Alt text](linux_images/pre_sta_run3.png)
+![Alt text](linux_images/pre_sta_run4.png)
+![Alt text](linux_images/pre_sta_run2.png)
+
+Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+
+Commands to include new lef and perform synthesis
+
+```bash
+# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a -tag "filename" -overwrite
+
+# Adiitional commands to include newly added lef to openlane flow
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+# Command to set new value for SYNTH_SIZING
+set ::env(SYNTH_SIZING) 1
+
+# Command to set new value for SYNTH_MAX_FANOUT
+set ::env(SYNTH_MAX_FANOUT) 4
+
+# Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+echo $::env(SYNTH_DRIVING_CELL)
+
+# Now that the design is prepped and ready, we can run synthesis using following command
+run_synthesis
+```
+
 ![Alt text](linux_images/after.png)
 ![Alt text](linux_images/after.png)
 
