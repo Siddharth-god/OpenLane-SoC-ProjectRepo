@@ -2807,4 +2807,4 @@ Screenshots of commands run and timing report generated
 
 # Certificate
 
-![Alt text](linux_images/openroad8.png)
+![Alt text](images/risc5certificate.jpg)
